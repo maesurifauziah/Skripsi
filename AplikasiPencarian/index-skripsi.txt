@@ -1,0 +1,6191 @@
+PUT  localhost:9200/skripsi/_doc/1
+{
+	"IDDoc" : 1,
+	"NPM" : "C1A140004",
+	"Title" :"PENGEMBANGAN SISTEM INFORMASI AKADEMIK BERBASIS KKNI MODUL NILAI MATAKULIAH STUDI KASUS JURUSAN TEKNIK INDUSTRI FAKULTAS TEKNIK UNIVERSITAS JENDRAL ACHMAD YANI",
+	"Author" : "BUDIMAN FAJAR FIRDAUS",
+	"Keywords" : ["Sistem Informasi", "Akademik", "Nilai Mata Kuliah", "KKNI"],
+	"Year" : 2018,
+	"Status" : "Selesai",
+	"Tags" :"",
+	"Mounth" : "",
+	"Fulltext" : "PENGEMBANGAN SISTEM INFORMASI AKADEMIK 
+
+BERBASIS KKNI MODUL NILAI MATAKULIAH 
+
+STUDI KASUS JURUSAN TEKNIK INDUSTRI FAKULTAS 
+
+TEKNIK UNIVERSITAS JENDRAL ACHMAD YANI 
+
+ 
+
+ 
+
+DRAF SKRIPSI 
+
+ 
+
+ 
+
+Karya Tulis sebagai syarat memperoleh  
+
+Gelar Sarjana Komputer dari Fakultas Teknologi Informasi  
+
+Universitas Bale Bandung 
+
+ 
+
+ 
+
+ 
+
+Disusun oleh: 
+
+BUDIMAN FAJAR FIRDAUS 
+
+NPM.  C1A140004 
+
+ 
+
+ 
+
+ 
+
+PROGRAM STRATA 1 
+
+PROGRAM STUDI TEKNIK INFORMATIKA 
+
+FAKULTAS TEKNOLOGI INFORMASI  
+
+UNIVERSITAS BALE BANDUNG  
+
+BANDUNG 
+
+2018
+
+
+
+LEMBAR PERSETUJUAN PENGUJI 
+
+
+
+LEMBAR PERSETUJUAN PEMBIMBING 
+
+ 
+
+ 
+
+
+
+LEMBAR PERSETUJUAN PROGRAM STUDI 
+
+
+
+LEMBAR PERSETUJUAN FAKULTAS 
+
+
+
+ 
+
+iii 
+
+ 
+
+ABSTRAK 
+
+Kerangka Kualifikasi Nasional Indonesia (KKNI) adalah kerangka 
+
+penjenjangan kualifikasi sumber daya manusia Indonesia yang menyandingkan, 
+
+menyetarakan, dan mengintegrasikan sektor pendidikan dengan sektor pelatihan 
+
+dan pengalaman kerja dalam suatu skema pengakuan kemampuan kerja yang 
+
+disesuaikan dengan struktur di berbagai sektor pekerjaan. 
+
+Berdasarkan Peraturan Presiden Nomor 8 Tahun 2012, dan Undang-Undang 
+
+Nomor 12 Tahun 2012, pemerintah telah menerbitkan Kerangka Kualifikasi 
+
+Nasional Indonesia (KKNI) tentang Pendidikan Tinggi untuk mendorong semua 
+
+perguruan tinggi menyesuaikan diri dengan ketentuan tersebut. Oleh karena itu 
+
+dibutuhkan pengembangan sistem informasi akademik yang sebelumnya belum 
+
+berbasis KKNI menjadi sistem informasi akademik yang berbasis KKNI.  
+
+Dikarenakan itu ada beberapa modul yang harus diubah dan dilakukan 
+
+pengembangan sistem agar sistem informasi akademik tersebut bisa memenuhi 
+
+kriteria Kerangka Kualifikasi Nasional Indonesia (KKNI). Salah satu modul yang 
+
+harus dikembangkan yaitu modul Nilai Mata Kuliah Berbasis KKNI yang akan 
+
+menjadi fokus penulis dalam penelitian ini.  
+
+. 
+
+ 
+
+Kata Kunci: Sistem Informasi, Akademik, Nilai Mata Kuliah, KKNI 
+
+
+
+ 
+
+iv 
+
+ 
+
+ABSTRACT 
+
+Indonesian Qualification Framework (IQF) is the provision of human 
+
+resources that pairing, equalize and integrate structures related fields in various 
+
+occupational sectors. 
+
+Based on Peraturan Presiden Nomor 8 Tahun 2012, and Undang-Undang 
+
+Nomor 12 Tahun 2012, the government has issued the Indonesian Qualification 
+
+Framework (IQF) on Higher Education to encourage universities in accordance 
+
+with the provisions. Therefore it is necessary to develop an academic information 
+
+system that has not been based on IQF into an academic information system based 
+
+on IQF. 
+
+Because of that there are some modules that must be changed and done 
+
+system development so that academic information system can meet the criteria of 
+
+Indonesian Qualification Framework (IQF). One of the modules that should be 
+
+developed is the IQF-Based Subject Course module which will become the author's 
+
+focus in this research. 
+
+. 
+
+ 
+
+Keywords: Information System, Academic, Course Value, IQF
+
+
+
+ 
+
+v 
+
+ 
+
+KATA PENGANTAR 
+
+Dengan mengucapkan puji syukur yang sebesar – besarnya ke hadirat Allah 
+
+SWT, berkat rahmat-Nya penulis dapat menyelesaikan penelitian dan penulisan 
+
+skripsi ini sebagai salah satu syarat dalam memperoleh gelar Sarjana Komputer 
+
+pada jurusan Teknik Informatika Fakultas Teknologi Informasi Universitas Bale 
+
+Bandung dengan judul “Pengembangan Sistem Informasi Akademik Modul Nilai 
+
+Mata Kuliah Berbasis KKNI Studi Kasus Jurusan Teknik Industri Fakultas Teknik 
+
+Universitas Jendral Achmad Yani”. 
+
+Selama proses penulisan skripsi ini penulis menemui beberapa hambatan, 
+
+tetapi dengan terus semangat dan dengan bantuan dari berbagai pihak, 
+
+alhamdulillah akhirnya penelitian dan penulisan skripsi ini dapat di selesaikan. 
+
+Oleh karena itu, penulis ingin menyampaikan terima kasih yang sebesar-besarnya 
+
+kepada: 
+
+1. Allah SWT yang telah memberikan karunia-Nya selama proses pengerjaan dan 
+
+penulisan skripsi ini. 
+
+2. Keluarga tercinta yang senantiasa selalu mendukung penulis dalam pengerjaan 
+
+dan penulisan skripsi ini. 
+
+3. Bapak Yudi Herdiana, S.T., M.T. Selaku Dekan Fakultas Teknologi Informasi 
+
+Universitas Bale Bandung. 
+
+4. Bapak Yaya Suharya, S.Kom,, M.T. Selaku Ketua Program Studi Teknik 
+
+Informatika Fakultas Teknologi Informasi Universitas Bale Bandung. 
+
+5. Bapak Zen Munawar, S.T., M.Kom. Selaku Dosen Pembimbing I yang 
+
+senantiasa membimbing dan mengarahkan penulis dalam penulisan skripsi ini. 
+
+6. Bapak Mochamad Ridwan, S.T., M.Kom. Selaku Dosen Pembimbing II dan 
+
+juga selaku pimpinan project pengembangan sistem informasi akademik Teknik 
+
+Industri UNJANI yang senantiasa membimbing, mengarahkan dan membantu 
+
+penulis dalam pengerjaan dan penulisan skripsi ini. 
+
+
+
+vi 
+
+ 
+
+ 
+
+7. Teman-teman seperjuangan yang selalu menemani dan saling membantu dalam 
+
+menyelesaikan skripsi ini. 
+
+8. Semua pihak yang tidak dapat disebutkan satu persatu namanya, yang telah 
+
+membantu dalam penyelesaian skripsi ini. 
+
+Semoga Alloh SWT memberikan balasan yang berlipat ganda atas kebaikan 
+
+yang telah diberikan oleh semua pihak kepada penulis. 
+
+Penulis menyadari penyusunan skripsi ini jauh dari kata sempurna, penulis 
+
+mengharapkan kritik dan saran dari seluruh pembaca. Semoga skripsi ini dapat 
+
+bermanfaat bagi berbagai pihak. 
+
+ 
+
+Baleendah, Juli 2018 
+
+ 
+
+ 
+
+Budiman Fajar Firdaus
+
+
+
+ 
+
+vii 
+
+ 
+
+DAFTAR ISI 
+
+ABSTRAK ............................................................................................................. iii 
+
+ABSTRACT ........................................................................................................... iv 
+
+KATA PENGANTAR ............................................................................................ v 
+
+DAFTAR ISI ......................................................................................................... vii 
+
+DAFTAR GAMBAR ............................................................................................. xi 
+
+DAFTAR TABEL ................................................................................................ xiv 
+
+DAFTAR LAMPIRAN ........................................................................................ xvi 
+
+BAB I PENDAHULUAN ....................................................................................... 1 
+
+1.1. Latar Belakang ......................................................................................... 1 
+
+1.2. Rumusan Masalah .................................................................................... 2 
+
+1.3. Batasan Masalah ....................................................................................... 3 
+
+1.4. Tujuan ....................................................................................................... 3 
+
+1.5. Metodologi ............................................................................................... 4 
+
+1.5.1. Metode Pengumpulan Data ............................................................... 4 
+
+1.5.2. Metodologi Pengembangan Sistem ................................................... 4 
+
+1.5.3. Documentation (Dokumentasi / Laporan Akhir) .............................. 5 
+
+1.6. Sistematika ............................................................................................... 6 
+
+BAB II TINJAUAN PUSTAKA ............................................................................. 7 
+
+2.1. Landasan Teori ......................................................................................... 7 
+
+2.2. Dasar Teori ............................................................................................... 8 
+
+2.2.1. Sistem Informasi Akademik .............................................................. 8 
+
+2.2.2. Kerangka Kerja Nasional Indonesia (KKNI) .................................... 8 
+
+2.2.3. Study Outcome (Capaian Pembelajaran Lulusan) ............................. 9 
+
+2.2.4. Learning Outcome (Capaian Pembelajaran Matakuliah) .................. 9 
+
+2.2.5. Assesment (Penilaian)...................................................................... 10 
+
+2.2.6. Web .................................................................................................. 10 
+
+2.2.7. Aplikasi Berbasis Web .................................................................... 10 
+
+2.2.8. Basis Data ....................................................................................... 11 
+
+2.2.9. MDD (Model Driven Development) ............................................... 11 
+
+2.2.10. UML (Unified Modeling Language) ........................................... 12 
+
+
+
+viii 
+
+ 
+
+ 
+
+2.2.11. ERD (Entity Relationship Diagram) ........................................... 13 
+
+2.2.12. HTML (Hypertext Markup Languange) ...................................... 13 
+
+2.2.13. CSS (Cascading Style Sheet) ....................................................... 15 
+
+2.2.14. PHP (Hypertext Preprocessor) .................................................... 15 
+
+2.2.15. MySQL ........................................................................................ 17 
+
+2.2.16. XAMPP ....................................................................................... 17 
+
+BAB III METODOLOGI ...................................................................................... 18 
+
+3.1. Investigasi Pendahuluan ......................................................................... 19 
+
+3.2. Analisis Masalah .................................................................................... 20 
+
+3.3. Analisis Kebutuhan ................................................................................ 21 
+
+3.3.1. Analisis Kebutuhan Pengembangan Sistem .................................... 21 
+
+3.3.2. Analisis Alat/Tools dalam Pengembangan Sistem .......................... 21 
+
+3.4. Analisis Keputusan ................................................................................. 22 
+
+3.5. Perancangan ............................................................................................ 22 
+
+3.6. Konstruksi / Coding ................................................................................ 23 
+
+3.7. Integrasi .................................................................................................. 23 
+
+3.8. Dokumentasi / Laporan Akhir ................................................................ 24 
+
+BAB IV ANALISIS PERANCANGAN DAN HASIL ........................................ 25 
+
+4.1. Analisis ................................................................................................... 25 
+
+4.1.1. Analisis Masalah ............................................................................. 25 
+
+4.1.2. Analisis Software ............................................................................ 28 
+
+4.1.3. Analisis Pengguna ........................................................................... 28 
+
+4.1.4. User Interface .................................................................................. 29 
+
+4.1.5. Fitur-Fitur ........................................................................................ 29 
+
+4.1.6. Analisis Data ................................................................................... 30 
+
+4.2. Perancangan ............................................................................................ 31 
+
+4.2.1. Unified Model Language (UML) .................................................... 31 
+
+4.2.1.1. Use Case Diagram ................................................................... 31 
+
+4.2.1.2. Skenario Use Case ................................................................... 31 
+
+4.2.1.3. Activity Diagram ...................................................................... 45 
+
+4.2.1.4. Class Diagram ......................................................................... 66 
+
+4.2.2. Struktur Tabel.................................................................................. 67 
+
+
+
+ix 
+
+ 
+
+ 
+
+4.2.3. Desain .............................................................................................. 68 
+
+4.2.3.1. Halaman Study Outcome .......................................................... 68 
+
+4.2.3.2. Halaman Matakuliah ................................................................ 71 
+
+4.2.3.3. Halaman Setup Learning Outcome dan Assesment Matakuliah
+
+ 72 
+
+4.2.3.3.1. Tab Setup Learning Outcome dan Assesment Matakuliah .. 72 
+
+4.2.3.3.2. Tab Setup Bobot Assesment ................................................. 75 
+
+4.2.3.4. Halaman Nilai Assesment Matakuliah Setiap Mahasiswa ....... 76 
+
+4.3. Hasil ........................................................................................................ 79 
+
+4.3.1. Spesifikasi Sistem ........................................................................... 79 
+
+4.3.1.1. Perangkat Keras ....................................................................... 79 
+
+4.3.1.2. Perangkat Lunak ...................................................................... 79 
+
+4.3.2. Instalasi Sistem ............................................................................... 80 
+
+4.3.2.1. Instalasi Aplikasi...................................................................... 80 
+
+4.3.2.2. Instalasi Database .................................................................... 82 
+
+4.3.3. Menjalankan Sistem ........................................................................ 84 
+
+4.3.3.1. Halaman Login ........................................................................ 85 
+
+4.3.3.2. Halaman Dashboard ................................................................. 85 
+
+4.3.3.3. Halaman Study Outcome ......................................................... 86 
+
+4.3.3.4. Halaman Matakuliah ................................................................ 88 
+
+4.3.3.5. Halaman Setup Learning Outcome dan Assesment Matakuliah
+
+ 90 
+
+4.3.3.5.1. Tab Setup Learning Outcome dan Assesment ..................... 90 
+
+4.3.3.5.2. Tab Setup Bobot Assesment ................................................ 93 
+
+4.3.3.6. Halaman Nilai Assesment Matakuliah Setiap Mahasiswa ....... 94 
+
+BAB V  KESIMPULAN DAN SARAN ............................................................... 97 
+
+5.1. Kesimpulan ............................................................................................. 97 
+
+5.2. Saran ....................................................................................................... 98 
+
+DAFTAR PUSTAKA ........................................................................................... 99 
+
+RIWAYAT HIDUP ............................................................................................. 101 
+
+LAMPIRAN ........................................................................................................ 102 
+
+ 
+
+
+
+x 
+
+ 
+
+ 
+
+ 
+
+
+
+ 
+
+xi 
+
+ 
+
+DAFTAR GAMBAR 
+
+Gambar 2. 1. Model Driven Development ............................................................ 12 
+
+Gambar 3. 1. Metodologi Penelitian ..................................................................... 18 
+
+Gambar 3. 2. Struktur Orgasnisasi ........................................................................ 20 
+
+Gambar 4. 1. Use Case Diagram ........................................................................... 31 
+
+Gambar 4. 2. Acivity Diagram Login ................................................................... 45 
+
+Gambar 4. 3. Activity Diagram Study Outcome ................................................... 46 
+
+Gambar 4. 4. Activity Diagram Tambah Study Outcome ..................................... 47 
+
+Gambar 4. 5. Activity Diagram Edit Study Outcome ........................................... 48 
+
+Gambar 4. 6. Activity Diagram Hapus Study Outcome........................................ 49 
+
+Gambar 4. 7. Activity Diagram Matakuliah.......................................................... 50 
+
+Gambar 4. 8. Activity Diagram Tambah Matakuliah ........................................... 51 
+
+Gambar 4. 9. Activity Diagram Edit Matakuliah .................................................. 52 
+
+Gambar 4. 10. Activity Diagram Hapus Matakuliah ............................................ 53 
+
+Gambar 4. 11. Activity Diagram Learning Outcome Matakuliah ........................ 54 
+
+Gambar 4. 12. Activity Diagram Tambah Learning Outcome Matakuliah .......... 55 
+
+Gambar 4. 13. Activity Diagram Edit Learning Outcome Matakuliah ................. 56 
+
+Gambar 4. 14. Activity Diagram Hapus Learning Outcome Matakuliah ............. 57 
+
+Gambar 4. 15. Activity Diagram Assesment Matakuliah ..................................... 58 
+
+Gambar 4. 16. Activity Diagram Tambah Assesment Matakuliah ....................... 59 
+
+Gambar 4. 17. Activity Diagram Edit Assesment Matakuliah.............................. 60 
+
+Gambar 4. 18. Activity Diagram Hapus Assesment Matakuliah .......................... 61 
+
+Gambar 4. 19. Activity Diagram Nilai Assesment ............................................... 62 
+
+Gambar 4. 20. Activity Diagram Tambah Nilai Assesment ................................. 63 
+
+Gambar 4. 21. Activity Diagram Edit Nilai Assesment ........................................ 64 
+
+Gambar 4. 22. Activity Diagram Hapus Nilai Assesment .................................... 65 
+
+Gambar 4. 23. Class Diagram ............................................................................... 66 
+
+Gambar 4. 24. Desain Halaman Study Outcome .................................................. 69 
+
+Gambar 4. 25. Desain Modal Tambah Study Outcome ........................................ 69 
+
+Gambar 4. 26. Desain Modal Edit Study Outcome ............................................... 70 
+
+Gambar 4. 27. Desain Modal Konfirmasi Hapus Study Outcome ........................ 70 
+
+
+
+xii 
+
+ 
+
+ 
+
+Gambar 4. 28. Desain Halaman Matakuliah ......................................................... 71 
+
+Gambar 4. 29. Desain Modal Tambah Matakuliah ............................................... 71 
+
+Gambar 4. 30. Desain Modal Edit Matakuliah ..................................................... 71 
+
+Gambar 4. 31. Desain Modal Konfirmasi Hapus Matakuliah ............................... 72 
+
+Gambar 4. 32. Desain Tab Setup Learning Outcome dan Assesment Matakuliah 72 
+
+Gambar 4. 33. Desain Modal Tambah Learning Outcome ................................... 73 
+
+Gambar 4. 34. Desain Modal Edit Learning Outcome.......................................... 73 
+
+Gambar 4. 35. Desain Modal Konfirmasi Hapus Learning Outcome ................... 73 
+
+Gambar 4. 36. Desain Modal Tambah Assesment ................................................ 74 
+
+Gambar 4. 37. Desain Modal Edit Assesment ...................................................... 74 
+
+Gambar 4. 38. Desain Modal Konfirmasi Hapus Assesment................................ 74 
+
+Gambar 4. 39. Desain Tab Setup Bobot Assesment ............................................. 75 
+
+Gambar 4. 40. Desain Report Rencana Pembelajaran Semester (RPS) ................ 76 
+
+Gambar 4. 41. Desain Halaman Nilai Assesment Matakuliah Setiap Mahasiswa 77 
+
+Gambar 4. 42. Desain Report Nilai Assesment Matakuliah Setiap Mahasiswa ... 77 
+
+Gambar 4. 43. Desain Halaman Study Outcome Mahasiswa ............................... 78 
+
+Gambar 4. 44. Desain Report Study Outcome Mahasiswa ................................... 78 
+
+Gambar 4. 45. Folder siakad-unjani ...................................................................... 80 
+
+Gambar 4. 46. Folder siakad-unjani di htdocs ...................................................... 81 
+
+Gambar 4. 47. Tampilan XAMPP ......................................................................... 81 
+
+Gambar 4. 48. command php artisan serve ........................................................... 82 
+
+Gambar 4. 49. Redirect Login SIAKAD ............................................................... 82 
+
+Gambar 4. 50. Localhost/phpmyadmin ................................................................. 82 
+
+Gambar 4. 51. Create database siakad-unjani ....................................................... 83 
+
+Gambar 4. 52. php artisan migrate --seed ............................................................. 83 
+
+Gambar 4. 53. Command php artisan serve .......................................................... 83 
+
+Gambar 4. 54. Login SIAKAD ............................................................................. 84 
+
+Gambar 4. 55. Halaman Dashboard ...................................................................... 84 
+
+Gambar 4. 56. Halaman Login .............................................................................. 85 
+
+Gambar 4. 57. Halaman Dashboard ...................................................................... 86 
+
+Gambar 4. 58. Halaman Study Outcome .............................................................. 86 
+
+Gambar 4. 59. Modal Tambah Study Outcome .................................................... 87 
+
+
+
+xiii 
+
+ 
+
+ 
+
+Gambar 4. 60. Modal Edit Study Outcome ........................................................... 87 
+
+Gambar 4. 61. Modal Konfirmasi Hapus Study Outcome .................................... 88 
+
+Gambar 4. 62. Halaman Matakuliah ..................................................................... 88 
+
+Gambar 4. 63. Modal Tambah Matakuliah ........................................................... 89 
+
+Gambar 4. 64. Modal Edit Matakuliah.................................................................. 89 
+
+Gambar 4. 65. Modal Konfirmasi Hapus Matakuliah ........................................... 89 
+
+Gambar 4. 66. Tab Setup Learning Outcome dan Assesment .............................. 90 
+
+Gambar 4. 67. Modal Tambal Learning Outcome ................................................ 91 
+
+Gambar 4. 68. Modal Edit Learning Outcome ...................................................... 91 
+
+Gambar 4. 69. Modal Konfirmasi Hapus Learning Outcome ............................... 92 
+
+Gambar 4. 70. Modal Tambah Assesment ............................................................ 92 
+
+Gambar 4. 71. Modal Edit Assesment .................................................................. 92 
+
+Gambar 4. 72. Modal Konfirmasi Hapus Assesment ............................................ 93 
+
+Gambar 4. 73. Tab Setup Bobot Assesment ......................................................... 93 
+
+Gambar 4. 74. Report Rencana Pembelajaran Semester (RPS) ............................ 94 
+
+Gambar 4. 75. Halaman Nilai Assement Matakuliah Setiap Mahasiswa ............. 94 
+
+Gambar 4. 76. Report Nilai Assesment Matakuliah Setiap Mahasiswa ............... 95 
+
+Gambar 4. 78. Report Study Outcome Mahasiswa ............................................... 96 
+
+  
+
+
+
+ 
+
+xiv 
+
+ 
+
+DAFTAR TABEL  
+
+Tabel 4. 1. Learning Outcome Matakuliah berdasarkan Study Outcome ............. 25 
+
+Tabel 4. 2. Bobot Assesment Matakuliah ............................................................. 26 
+
+Tabel 4. 3. Nilai Assesment Matakuliah setiap Mahasiswa .................................. 27 
+
+Tabel 4. 4. Analisis Data ....................................................................................... 30 
+
+Tabel 4. 5. Use Case Login ................................................................................... 32 
+
+Tabel 4. 6. Use Case Logout ................................................................................. 32 
+
+Tabel 4. 7. Use Case Menampilkan Study Outcome ............................................ 32 
+
+Tabel 4. 8. Use Case Input Study Outcome .......................................................... 33 
+
+Tabel 4. 9. Use Case Edit Study Outcome ............................................................ 33 
+
+Tabel 4. 10. Use Case Hapus Study Outcome ...................................................... 34 
+
+Tabel 4. 11. Use Case Menampilkan Matakuliah ................................................. 35 
+
+Tabel 4. 12. Use Case Input Matakuliah ............................................................... 35 
+
+Tabel 4. 13. Use Case Edit Matakuliah ................................................................. 36 
+
+Tabel 4. 14. Use Case Hapus Matakuliah ............................................................. 36 
+
+Tabel 4. 15. Use Case Menampilkan Learning Outcome Matakuliah .................. 37 
+
+Tabel 4. 16. Use Case Input Learning Outcome Matakuliah ................................ 37 
+
+Tabel 4. 17. Use Case Edit Learning Outcome Matakuliah .................................. 38 
+
+Tabel 4. 18. Use Case Hapus Learning Outcome Matakuliah .............................. 39 
+
+Tabel 4. 19. Use Case Menampilkan Assesment Matakuliah ............................... 40 
+
+Tabel 4. 20. Use Case Input Assesment Matakuliah ............................................. 40 
+
+Tabel 4. 21. Use Case Edit Assesment Matakuliah .............................................. 41 
+
+Tabel 4. 22. Use Case Hapus Assesment Matakuliah ........................................... 41 
+
+Tabel 4. 23. Use Case Menampilkan Nilai Assesment ......................................... 42 
+
+Tabel 4. 24. Use Case Input Nilai Assesment ....................................................... 42 
+
+Tabel 4. 25. Use Case Edit Nilai Assesment ......................................................... 43 
+
+Tabel 4. 26. Use Case Hapus Nilai Assesment ..................................................... 44 
+
+Tabel 4. 27. Struktur Tabel study_outcome .......................................................... 67 
+
+Tabel 4. 28. Struktur Tabel matakuliah ................................................................. 67 
+
+Tabel 4. 29. Struktur Tabel learning_outcome...................................................... 67 
+
+Tabel 4. 30. Struktur Tabel assesment .................................................................. 68 
+
+
+
+xv 
+
+ 
+
+ 
+
+Tabel 4. 31. Struktur Tabel nilai_assesment ......................................................... 68 
+
+Tabel 4. 32. Spesifikasi minimal perangkat keras ................................................ 79 
+
+Tabel 4. 33. Spesifikasi minimal perangkat lunak ................................................ 79 
+
+  
+
+
+
+ 
+
+xvi 
+
+ 
+
+DAFTAR LAMPIRAN 
+
+ 
+
+ 
+
+
+
+ 
+
+1 
+
+ 
+
+BAB I 
+
+PENDAHULUAN 
+
+ 
+
+1.1. Latar Belakang 
+
+Kerangka Kualifikasi Nasional Indonesia (KKNI) adalah kerangka 
+
+penjenjangan kualifikasi sumber daya manusia Indonesia yang menyandingkan, 
+
+menyetarakan, dan mengintegrasikan sektor pendidikan dengan sektor pelatihan 
+
+dan pengalaman kerja dalam suatu skema pengakuan kemampuan kerja yang 
+
+disesuaikan dengan struktur di berbagai sektor pekerjaan. 
+
+KKNI diatur secara khusus dalam Peraturan Presiden Republik Indonesia 
+
+Nomor 8 Tahun 2012. Namun, KKNI ini juga sering muncul dalam Ketentuan 
+
+Umum Peraturan Menteri, seperti halnya dalam Permendikbud No. 49 Tahun 2014 
+
+tentang Standar Nasional Pendidikan Tinggi. KKNI mempunyai 9 level, mulai dari 
+
+level 1 (pendidikan dasar) hingga level 9 (Strata 3 / S-3). Tiap level harus benar-
+
+benar sesuai dengan levelnya, dalam arti tidak boleh level 6 (S-2) merasakan level 
+
+8 (S-2). Dalam kata lain, tidak diperbolehkan S-1 berasa S-2 dan sebagainya. KKNI 
+
+merupakan kualifikasi mutu yang terkait dengan sistem pendidikan, sistem 
+
+pelatihan kerja, dan sistem penilaian kesetaraan capaian pembelajaran (learning 
+
+outcomes) secara nasional. Dengan adanya KKNI ini akan terbentuk SDM yang 
+
+bermutu, produktif dan profesional. Untuk menjamin mutu dari setiap individu 
+
+terdapat beberapa jenjang yang sudah diatur dalam KKNI, sehingga dengan adanya 
+
+jenjang atau tahapan ini akan benar-benar terbentuk kualifikasi dari SDM yang 
+
+benar-benar bermutu dan produktif. 
+
+Di Program Studi Teknik Industri Universitas Achmad Yani, sistem 
+
+informasi akademik yang berjalan masih belum menggunakan sistem informasi 
+
+akademik berbasis KKNI. Berdasarkan Peraturan Presiden Nomor 8 Tahun 2012, 
+
+dan Undang-Undang Nomor 12 Tahun 2012, pemerintah telah menerbitkan 
+
+Kerangka Kualifikasi Nasional Indonesia (KKNI) tentang Pendidikan Tinggi untuk 
+
+mendorong semua perguruan tinggi menyesuaikan diri dengan ketentuan tersebut. 
+
+
+
+2 
+
+ 
+
+ 
+
+Oleh karena itu dibutuhkan pengembangan sistem informasi akademik yang 
+
+sebelumnya belum berbasis KKNI menjadi sistem informasi akademik yang 
+
+berbasis KKNI. Sehingga ada beberapa modul yang harus diubah dan dilakukan 
+
+pengembangan sistem agar sistem informasi akademik tersebut bisa memenuhi 
+
+kriteria Kerangka Kualifikasi Nasional Indonesia (KKNI). 
+
+Berdasarkan permasalahan di atas, maka penulis sebagai salah satu anggota 
+
+tim project Pengembangan Sistem Informasi Akademik berbasis KKNI yang akan 
+
+diimplementasikan di Jurusan Teknik Industri Fakultas Teknik Universitas Jendral 
+
+Achmad Yani melakukan penelitian di project tersebut khususnya dalam modul 
+
+nilai mata kuliah. 
+
+Pengembangan sistem informasi inilah yang akan penulis dan tim project 
+
+kerjakan dan kemudian diimplementasikan menjadi sebuah sistem informasi 
+
+akademik berbasis KKNI. Dalam pengembangan sistem informasi akademik ini, 
+
+penulis melakukan penelitian dan pengembangan pada modul nilai mata kuliah 
+
+dengan judul penelitian yaitu “PENGEMBANGAN SISTEM INFORMASI 
+
+AKADEMIK BERBASIS KKNI MODUL NILAI MATA KULIAH STUDI 
+
+KASUS JURUSAN TEKNIK INDUSTRI FAKULTAS TEKNIK UNIVERSITAS 
+
+JENDRAL ACHMAD YANI”. 
+
+ 
+
+1.2. Rumusan Masalah 
+
+Berdasarkan latar belakang permasalahan di atas, sistem informasi 
+
+akademik yang berjalan di Program Studi Teknik Industri Fakultas Teknik 
+
+Universitas Achmad Yani akan dikembangkan menjadi sistem informasi akademik 
+
+yang berbasis KKNI, beberapa modul yang harus dikembangkan yaitu antara lain:  
+
+1. Akademik 
+
+a. Study Outcome 
+
+b. Tahun Akademik 
+
+c. Matakuliah 
+
+ Setup Learning Outcome  
+
+o Setup Assesment 
+
+
+
+3 
+
+ 
+
+ 
+
+2. Civitas 
+
+a. Dosen 
+
+b. Mahasiswa 
+
+3. Perkuliahan 
+
+a. Jadwal 
+
+ Nilai Assesment 
+
+b. KRS 
+
+c. KHS 
+
+ 
+
+1.3. Batasan Masalah 
+
+Adapun yang menjadi fokus penelitian penulis dalam pengembangan sistem 
+
+informasi akademik Jurusan Teknik Industri Fakultas Teknik Universitas Jendral 
+
+Achmad Yani adalah pengembangan sistem nilai mata kuliah agar bisa mengikuti 
+
+Sistem Informasi Akademik yang berbasis KKNI, pengembangan sistem nilai 
+
+matakuliah ini akan terkait dengan modul berikut: 
+
+1. Akademik 
+
+a. Study Outcome 
+
+b. Matakuliah 
+
+ Setup Learning Outcome  
+
+o Setup Assesment 
+
+2. Perkuliahan 
+
+a. Jadwal 
+
+ Nilai Assesment 
+
+ 
+
+1.4. Tujuan 
+
+Tujuan penelitian penulis yaitu terimplementasinya modul nilai yang 
+
+berdasarkan KKNI dan selanjutnya terintegrasi dengan Sistem Informasi Akademik 
+
+berbasis KKNI di Jurusan Teknik Industri Fakultas Teknik Universistas Jendral 
+
+Achmad Yani. 
+
+
+
+4 
+
+ 
+
+ 
+
+1.5. Metodologi 
+
+1.5.1. Metode Pengumpulan Data 
+
+Metode yang penulis gunakan untuk mengumpulkan data adalah: 
+
+1. Observasi, penulis melakukan pengamatan langsung di lapangan mengenai 
+
+objek penelitian 
+
+2. Wawancara, penulis melakukan tanya jawab singkat mengenai 
+
+permasalahan dan target yang ingin dicapai pada objek penelitian. 
+
+3. Studi literatur, penulis mencari literatur atau pustaka yang berhubungan 
+
+dengan objek penelitian. 
+
+ 
+
+1.5.2. Metodologi Pengembangan Sistem 
+
+Dalam penelitian ini, penulis menggunakan Model Driven Development 
+
+(MDD) yang di tulis oleh J. Whitten dan L. Bentley sebagai dasar metodologi 
+
+pengembangan sistem yang kemudian dikembangkan sesuai dengan kebutuhan 
+
+penelitian penulis. Berikut gambaran singkat metodologi pengembangan sistem 
+
+yang dilaksanakan oleh penulis bersama tim project: 
+
+1. Investigasi Pendahuluan 
+
+Dalam tahap ini, penulis bersama pimpinan project mendatangi tempat 
+
+penelitian untuk meminta izin penelitian dan melakukan pengumpulan data.  
+
+ 
+
+2. Analisis Masalah 
+
+Dalam tahap ini, melakukan analisis masalah yang terjadi di Jurusan Teknik 
+
+Industri Fakultas Teknik Universitas Jendral Achmad Yani dalam pengelolaan nilai 
+
+akademik. 
+
+ 
+
+3. Analisis Kebutuhan 
+
+
+
+5 
+
+ 
+
+ 
+
+Dalam tahap ini, penulis melakukan analisis kebutuhan apa saja yang 
+
+diperlukan untuk pengembangan sistem informasi yang akan dibangun, dan juga 
+
+alat/tools yang dibutuhkan dalam pengembangan sistem informasi. 
+
+  
+
+4. Perancangan 
+
+Dalam tahap rancangan ini, penulis membuat rancangan sistem 
+
+menggunakan Star UML untuk membuat use case diagram, activity diagram, class 
+
+diagram dan juga membuat ER diagram. Kemudian untuk membuat rancangan user 
+
+interface penulis menggunakan Balsamiq Mockup. 
+
+ 
+
+5. Konstruksi / Coding 
+
+Dalam tahapan penulisan kode program penulis menggunakan bahasa 
+
+pemrograman PHP sebagai bahasa pemrograman yang dijalankan di server untuk 
+
+pengembangan sistem informasi akademik. 
+
+6. Implementasi dan Pengujian 
+
+Dalam tahapan implementasi, penulis mengimplementasikan dengan cara 
+
+menguji setiap fungsionalitas pada modul nilai. 
+
+ 
+
+7. Integrasi 
+
+Dalam tahapan ini, penulis bersama tim project mengintegrasikan modul-
+
+modul yang telah diimplementasikan sebelumnya menjadi satu kesatuan sistem 
+
+informasi akademik yang utuh. 
+
+ 
+
+1.5.3. Documentation (Dokumentasi / Laporan Akhir) 
+
+Dalam tahap ini, penulis akan melaksanakan penyelesaian laporan akhir 
+
+yaitu berupa skripsi yang di dalamnya juga terdapat dokumentasi bagaimana 
+
+tahapan untuk implementasi dan menggunakan sistem informasi yang dibuat. 
+
+
+
+6 
+
+ 
+
+ 
+
+1.6. Sistematika 
+
+BAB I PENDAHULUAN   
+
+Berisikan latar belakang, rumusan masalah, batasan, tujuan penelitian, 
+
+penjelasan metodologi yang digunakan dalam pengumpulan data dan penyelesaian 
+
+penelitian secara singkat dan sistematika yang digunakan dalam penulisan laporan 
+
+penelitian. 
+
+ 
+
+BAB II    : TINJAUAN PUSTAKA   
+
+Berisikan landasan teori yang bersumber dari jurnal – jurnal yang sesuai 
+
+dengan objek penelitian dan dasar teori yang membangun penyusunan skripsi ini. 
+
+ 
+
+BAB III   : METODOLOGI   
+
+Berisikan penjelasan metodologi yang digunakan dalam penelitian. 
+
+ 
+
+BAB IV   : ANALISIS DAN PERANCANGAN 
+
+Berisikan hasil analisis dan perancangan dari pengembangan sistem 
+
+informasi akademik. 
+
+ 
+
+BAB V    : IMPLEMENTASI DAN PENGUJIAN   
+
+Berisikan dokumentasi dari penerapan, penggunaan dan pengujian sistem 
+
+informasi akademik. 
+
+ 
+
+BAB VI   : KESIMPULAN DAN SARAN 
+
+Berisikan kesimpulan dari penelitian dan saran yang dapat mengembangkan 
+
+sistem informasi akademik di masa yang akan datang. 
+
+
+
+ 
+
+7 
+
+ 
+
+BAB II 
+
+TINJAUAN PUSTAKA 
+
+ 
+
+2.1. Landasan Teori 
+
+Dalam melaksanakan penelitian, penulis juga mempelajari referensi dari 
+
+penelitian yang terdahulu sebagai landasan teori yang melandasi penelitian yang 
+
+tengah dilaksanakan. Beberapa landasan teori tersebut adalah: 
+
+1. “PENGEMBANGAN SISTEM INFORMASI AKADEMIK FAKULTAS 
+
+TEKNIK UNIVERSITAS TANJUNGPURA” oleh Fedi Rahadi Noviandi. Pada 
+
+jurnal ini dijelaskan bahwa sistem yang dikembangkan berbasis web mampu 
+
+memudahkan fitur-fitur pada dua sistem sebelumnya yang berbeda platform 
+
+(Noviandi, 2012).  
+
+2. “ANALISIS DAN PENGEMBANGAN SISTEM INFORMASI AKADEMIK 
+
+(SISFO) DI UNIPDU JOMBANG” oleh Mukhamad Masrur. Pada jurnal ini 
+
+disebutkan dalam perencanaan dan mendesain sistem informasi tentunya tidak 
+
+bisa hanya dikira-kira untuk mencapai sebuah tujuan. Tetapi harus mengerti 
+
+tentang prosedur dalam pembuatan sistem hingga mendapat tujuan yang 
+
+diinginkan (Masrur, 2008).   
+
+3.  “RANCANG BANGUN SISTEM INFORMASI AKADEMIK BERBASIS 
+
+WEB PADA FAKULTAS EKONOMI UNIVERSITAS MUHAMMADIYAH 
+
+PALEMBANG” oleh Pio Oktaria, Yenti Puspa Sari, Mardiani, S.Si.,M.T.I. 
+
+Hermawan, S.Kom. Pada jurnal ini dijelaskan dengan adanya sistem informasi 
+
+akademik berbasis web pada Fakultas Ekonomi Universitas Muhammadiyah 
+
+Palembang setidaknya dapat mempermudah dan mempercepat proses pencarian 
+
+data akademik maupun data yang berhubungan dengan akademik dan 
+
+mempermudah mahasiswa dalam melihat nilai, materi, dan tugas yang 
+
+diberikan oleh dosen (Oktaria, Sari, Mardiani, & Hermawan, 2009). 
+
+  
+
+
+
+8 
+
+ 
+
+ 
+
+2.2. Dasar Teori 
+
+2.2.1. Sistem Informasi Akademik 
+
+Sistem Informasi Akademik adalah suatu sistem Informasi yang dibangun 
+
+untuk memberikan kemudahan kepada pengguna dalam kegiatan administrasi 
+
+akademik kampus secara online, seperti proses Penerimaan Mahasiswa Baru 
+
+(PMB), pembuatan kurikulum, pembuatan jadwal kuliah, pengisian Kartu Rencana 
+
+Studi (KRS), pengisian nilai, pengelolaan data dosen & mahasiswa. Sistem ini juga 
+
+dapat berfungsi sebagai pendukung untuk analisis data dalam menentukan 
+
+keputusan Kampus. 
+
+ 
+
+2.2.2. Kerangka Kerja Nasional Indonesia (KKNI) 
+
+Kerangka Kualifikasi Nasional Indonesia, yang selanjutnya disingkat 
+
+KKNI, adalah kerangka penjenjangan kualifikasi kompetensi yang dapat 
+
+menyandingkan, menyetarakan, dan mengintegrasikan antara bidang pendidikan 
+
+dan bidang pelatihan kerja serta pengalaman kerja dalam rangka pemberian 
+
+pengakuan kompetensi kerja sesuai dengan struktur pekerjaan di berbagai sektor 
+
+(Perpress No 8, 2012). 
+
+KKNI diatur secara khusus dalam Peraturan Presiden Republik Indonesia 
+
+Nomor 8 Tahun 2012. Namun, KKNI ini juga sering muncul dalam Ketentuan 
+
+Umum Peraturan Menteri, seperti halnya dalam Permendikbud No. 49 Tahun 2014 
+
+tentang Standar Nasional Pendidikan Tinggi. KKNI mempunyai 9 level, mulai dari 
+
+level 1 (pendidikan dasar) hingga level 9 (Strata 3 / S-3). Tiap level harus benar-
+
+benar sesuai dengan levelnya, dalam arti tidak boleh level 6 (S-2) merasakan level 
+
+8 (S-2). Dalam kata lain, tidak diperbolehkan S-1 berasa S-2 dan sebagainya. KKNI 
+
+merupakan kualifikasi mutu yang terkait dengan sistem pendidikan, sistem 
+
+pelatihan kerja, dan sistem penilaian kesetaraan capaian pembelajaran (learning 
+
+outcomes) secara nasional. Dengan adanya KKNI ini akan terbentuk SDM yang 
+
+bermutu, produktif dan profesional. Untuk menjamin mutu dari setiap individu 
+
+terdapat beberapa jenjang yang sudah diatur dalam KKNI, sehingga dengan adanya 
+
+
+
+9 
+
+ 
+
+ 
+
+jenjang atau tahapan ini akan benar-benar terbentuk kualifikasi dari SDM yang 
+
+benar-benar bermutu dan produktif. 
+
+ 
+
+2.2.3. Study Outcome (Capaian Pembelajaran Lulusan) 
+
+Bagi program studi (prodi) yang telah beroperasi, tahap ini merupakan tahap 
+
+evaluasi kurikulum lama, yakni mengkaji seberapa jauh capaian pembelajaran telah 
+
+terbukti dimiliki oleh lulusan dan dapat beradaptasi terhadap perkembangan 
+
+kehidupan. Informasi untuk pengkajian ini bisa didapatkan melalui penelusuran 
+
+lulusan, masukan pemangku kepentingan, asosiasi profesi atau kolokium keilmuan, 
+
+dan kecenderungan perkembangan keilmuan/keahlian ke depan. Hasil dari kegiatan 
+
+ini adalah rumusan capaian pembelajaran baru. Pada program studi baru, maka 
+
+tahap pertama ini akan dimulai dengan analisis SWOT, penetapan visi keilmuan 
+
+prodi, melalui kebijakan perguruan tinggi dalam pengembangan prodi, disamping 
+
+juga melakukan analisis kebutuhan, serta mempertimbangkan masukan pemangku 
+
+kepentingan, asosiasi profesi/keilmuan. Semua tahap ini, rumusan capaian 
+
+pembelajaran lulusan yang dihasilkan harus memenuhi ketentuan yang tercantum 
+
+dalam SN-Dikti dan KKNI. (Direktorat Jenderal Pembelajaran dan 
+
+Kemahasiswaan, 2016) 
+
+ 
+
+2.2.4. Learning Outcome (Capaian Pembelajaran Matakuliah) 
+
+CPL yang dibebankan pada mata kuliah masih bersifat umum terhadap mata 
+
+kuliah, oleh karena itu CPL yang di bebankan pada mata kuliah perlu diturunkan 
+
+menjadi capaian pembelajaran mata kuliah (CPMK) atau sering disebut learning 
+
+outcomes. CPMK merupakan kemampuan akhir yang direncanakan pada tiap tahap 
+
+pembelajaran yang berkontribusi terhadap CPL. CPMK bersifat dapat diamati, 
+
+dapat diukur dan dinilai, lebih spesifik terhadap mata kuliah, serta dapat 
+
+didemonstrasikan oleh mahasiswa sebagai capaian CPL. (Direktorat Jenderal 
+
+Pembelajaran dan Kemahasiswaan, 2016) 
+
+ 
+
+
+
+10 
+
+ 
+
+ 
+
+2.2.5. Assesment (Penilaian) 
+
+Penilaian mencakup prinsip edukatif, otentik, objektif, akuntabel, dan 
+
+transparan yang dilakukan secara terintegrasi. Kriteria menunjuk pada standar 
+
+keberhasilan mahasiswa dalam sebuah tahapan pembelajaran, sedangkan indikator 
+
+merupakan unsur-unsur yang menunjukkan kualitas kinerja mahasiswa. Bobot 
+
+penilaian merupakan ukuran dalam persentase (%) yang menunjukkan persentase 
+
+keberhasilan satu tahap penilaian terhadap nilai keberhasilan keseluruhan dalam 
+
+mata kuliah. (Direktorat Jenderal Pembelajaran dan Kemahasiswaan, 2016) 
+
+ 
+
+2.2.6. Web 
+
+Web adalah salah satu aplikasi internet yang terdiri dari perangkat lunak, 
+
+kumpulan protokol dan seperangkat aturan yang memungkinkan kita untuk 
+
+mengakses informasi di internet. Web menggunakan hypertext (teks yang terhubung 
+
+ke teks lainnya) dan mendukung file multimedia sehingga dapat digunakan oleh 
+
+pengguna internet di seluruh dunia. Dengan aplikasi web kita bisa berkomunikasi 
+
+berbagai informasi sekaligus mencari informasi baru di internet. World Wide Web 
+
+ditemukan oleh Tim Berners-Lee, seorang ilmuwan yang bekerja di pusat penelitian 
+
+fisika CERN (Sujatmiko, 2012) 
+
+ 
+
+2.2.7. Aplikasi Berbasis Web 
+
+Aplikasi web adalah suatu aplikasi yang diakses menggunakan penjelajah 
+
+web (web browser) melalui suatu jaringan seperti internet atau intranet. Ia juga 
+
+merupakan perangkat lunak komputer yang dikodekan dalam bahasa yang 
+
+didukung penjelajah web (web browser) seperti HTML, Javascript, PHP dan lain-
+
+lain serta bergantung pada browser tersebut untuk menampilkan aplikasi 
+
+(Sujatmiko, 2012). 
+
+ 
+
+ 
+
+
+
+11 
+
+ 
+
+ 
+
+2.2.8. Basis Data 
+
+Basis data (database) adalah kumpulan informasi yang disimpan di dalam 
+
+komputer secara sistematik sehingga dapat diperiksa menggunakan suatu program 
+
+komputer untuk memperoleh informasi dari basis data tersebut (Sujatmiko, 2012). 
+
+Berikut operasi dasar basis data : 
+
+ Pembuatan basis data (create database) 
+
+ Penghapusan basis data (drop database) 
+
+ Pembuatan file/tabel (create table) 
+
+ Penghapusan file/tabel (drop table) 
+
+ Pengubahan tabel (update …) 
+
+ Penambahan/pengisian (insert …) 
+
+ Penghapusan data (delete) 
+
+ Pengambilan data (retrieve/search) 
+
+ 
+
+2.2.9. MDD (Model Driven Development) 
+
+Model-Driven Development (MDD) adalah sebuah paradigma untuk 
+
+menulis dan mengimplementasikan program komputer secara cepat, efektif dan 
+
+berbiaya minimum. Pendekatan MDD untuk pengembangan perangkat lunak 
+
+memungkinkan orang untuk bekerja sama dalam sebuah proyek bahkan dengan 
+
+tingkat pengalaman masing-masing yang sangat bervariasi. Hal ini memungkinkan 
+
+perusahaan untuk memaksimalkan kerja yang efektif pada sebuah proyek dan 
+
+meminimalkan overhead yang diperlukan untuk menghasilkan perangkat lunak 
+
+yang dapat divalidasi oleh pengguna akhir dalam waktu sesingkat mungkin (Booch, 
+
+2005).  
+
+MDD merupakan metodologi tangkas (agile), terus berkembang untuk 
+
+memenuhi kebutuhan bisnis. MDD adalah sebuah ide yang mampu 
+
+mentransformasikan model ke dalam sistem komputer. Model dapat berbentuk 
+
+berbagai macam seperti berikut:  
+
+ 
+
+
+
+12 
+
+ 
+
+ 
+
+ 
+
+Gambar 2. 1. Model Driven Development 
+
+ 
+
+2.2.10. UML (Unified Modeling Language) 
+
+UML (Unified Modeling Language) adalah salah satu standar bahasa yang 
+
+banyak digunakan didunia industri untuk mendefinisikan requirement, membuat 
+
+analisis dan desain, serta menggambarkan arsitektur dalam pemrograman 
+
+berorientasi objek. UML merupakan bahasa visual untuk pemodelan dan 
+
+komunikasi mengenai sebuah sistem dengan menggunakan diagram dan teks-teks 
+
+pendukung. UML hanya berfungsi untuk melakukan pemodelan, jadi penggunaan 
+
+UML tidak terbatas pada metodologi tertentu, meskipun pada kenyataannya UML 
+
+paling banyak digunakan pada metodologi berorientasi objek (Rosa & Shalahuddin, 
+
+2011). 
+
+UML (Unified Modeling Language) adalah ‘bahasa’ pemodelan untuk 
+
+sistem atau perangkat lunak yang berparadigma ‘berorientasi objek”. Pemodelan 
+
+(modeling) sesungguhnya digunakan untuk penyederhanaan permasalahan-
+
+permasalahan yang kompleks sedemikian rupa sehingga lebih mudah dipelajari dan 
+
+dipahami (Nugroho, 2009) 
+
+
+
+13 
+
+ 
+
+ 
+
+2.2.11. ERD (Entity Relationship Diagram) 
+
+(Kadir, 2009) menyatakan bahwa entitas yang ada pada suatu sistem 
+
+umumnya banyak. Antar entitas memiliki hubungan. Hubungan antar entitas biasa 
+
+dinyatakan dengan Diagram Hubungan Entitas (Entity Relationship Diagram – 
+
+ERD). Diagram ini hanya menggambarkan hubungan antar entitas atau data dan 
+
+tidak menggambarkan proses dari suatu sistem. Hubungan atau relasi antar entitas 
+
+dengan entitas lainnya menggunakan bentuk “diamond”. Elemen-elemen ERD 
+
+antara lain:  
+
+1. Entitas (Entity) adalah sesuatu apa saja yang ada di dalam sistem, nyata 
+
+maupun abstrak dimana data tersimpan atau dimana terdapat data. 
+
+2. Relationship adalah hubungan alamiah yang terjadi antara entitas. 
+
+3. Relationship Degree atau Derajat Relationship adalah jumlah entitas yang 
+
+berpartisipasi dalam satu Relationship. 
+
+4. Atribut adalah sesuatu yang menjelaskan apa sebenarnya yang dimaksud 
+
+entitas maupun Relationship, sehingga dapat dikatakan atribut adalah 
+
+elemen dari setiap entitas dan Relationship. 
+
+5. Kardinalitas (Cardinality) menunjukkan jumlah maksimum entitas yang 
+
+dapat berelasi dengan entitas pada entitas yang lain. Hubungan yang terjadi 
+
+dapat berbentuk : hubungan satu ke satu (1:1), hubungan satu ke banyak 
+
+(1:M) atau banyak ke satu (M:1), dan hubungan banyak ke banyak (N:M). 
+
+  
+
+2.2.12. HTML (Hypertext Markup Languange) 
+
+HTML adalah bahasa komputer yang digunakan untuk membuat sebuah 
+
+halaman web atau program yang digunakan untuk menulis (membuat) halaman web 
+
+di internet. Fasilitas / bahasa ini biasanya mempunyai ekstensi .htm atau .html 
+
+(Sujatmiko, 2012). Seiring perkembangan kebutuhan, HTML saat ini telah 
+
+memasuki versi 5 dan biasa disebut dengan HTML5. HTML5 adalah sebuah bahasa 
+
+markah untuk menstrukturkan dan menampilkan isi dari WWW, sebuah teknologi 
+
+inti dari internet. HTML5 adalah revisi kelima dari HTML (yang pertama kali 
+
+
+
+14 
+
+ 
+
+ 
+
+diciptakan pada tahun 1990 dan versi keempatnya, HTML4 pada tahun 1997) dan 
+
+hingga bulan Juni 2011 masih dalam pengembangan. Tujuan utama pengembangan 
+
+HTML5 adalah untuk memperbaiki teknologi HTML agar mendukung teknologi 
+
+multimedia terbaru, mudah dibaca oleh manusia dan mudah dimengerti oleh mesin 
+
+(Sujatmiko, 2012). 
+
+Berikut beberapa pengertian/istilah dasar dalam HTML: 
+
+1. Pengertian Tag 
+
+Sebagai sebuah bahasa markup, HTML membutuhkan cara untuk 
+
+memberi perintah pada web browser untuk apa fungsi sebuah teks. Apakah 
+
+teks itu ditulis sebagai sebuah paragraf, list, atau sebagai link. Dalam 
+
+HTML, tanda ini dikenal dengan istilah tag. 
+
+Hampir semua tag di dalam HTML ditulis secara berpasangan, 
+
+yakni tag pembuka dan tag penutup, di mana objek yang dikenai perintah 
+
+tag berada di antara tag pembuka “<” dan tag penutup “/>”. Objek ini dapat 
+
+berupa teks, gambar, maupun video.  
+
+ 
+
+2. Pengertian Element 
+
+Element adalah isi dari tag yang berada di antara tag pembuka dan 
+
+tag penutup, termasuk tag itu sendiri dan atribut yang dimilikinya (jika ada).  
+
+ 
+
+3. Pengertian Atribut 
+
+Atribut adalah informasi tambahan yang diberikan kepada tag. 
+
+Informasi ini bisa berupa instruksi untuk warna dari teks, besar huruf dari 
+
+teks dan lain-lain. Setiap atribut memiliki pasangan nama dan nilai (value) 
+
+yang ditulis dengan name=”value”. Value diapit tanda kutip, boleh 
+
+menggunakan tanda kutip satu (‘) atau dua (“).  
+
+ 
+
+ 
+
+
+
+15 
+
+ 
+
+ 
+
+2.2.13. CSS (Cascading Style Sheet) 
+
+CSS (Cascading Style Sheet) adalah kumpulan perintah yang dibentuk dari 
+
+berbagai sumber yang disusun menurut urutan tertentu sehingga mampu mengatasi 
+
+konflik gaya/style (Sujatmiko, 2012). 
+
+Berikut beberapa pengertian/istilah dasar dalam CSS: 
+
+1. Pengertian Selector CSS 
+
+Karena kode CSS digunakan untuk mengubah/memanipulasi tampilan 
+
+dari tag HTML, CSS membutuhkan suatu cara untuk ‘mengaitkan’ atau 
+
+menghubungkan kode CSS dengan tag HTML yang sesuai. Hal inilah yang 
+
+dimaksud dengan selector dalam CSS. Sesuai dengan namanya, selector 
+
+digunakan untuk mencari bagian web yang ingin dimanipulasi atau yang ingin 
+
+diberi style.  
+
+ 
+
+2. Pengertian Property CSS 
+
+Property CSS adalah jenis style atau elemen apa yang akan diubah dari 
+
+sebuah tag HTML. CSS memiliki puluhan property yang dapat digunakan agar 
+
+menampilkan hasil akhir yang kita inginkan. Hampir semua property dalam 
+
+CSS dapat dipakai untuk seluruh selector 
+
+ 
+
+3. Pengertian Value CSS 
+
+Value CSS adalah nilai dari property. Misalkan untuk property 
+
+background-color yang digunakan untuk mengubah warna latar belakang dari 
+
+sebuah selector, value atau nilainya dapat berupa red, blue, black, atau white. 
+
+ 
+
+2.2.14. PHP (Hypertext Preprocessor) 
+
+PHP adalah bahasa pemrograman yang bisa kita gunakan untuk membuat 
+
+aplikasi web. Istilah PHP sebenarnya merupakan singkatan dari Hypertext 
+
+Preprocessor. Ada perbedaan antara PHP dan HTML, kode HTML diproses oleh 
+
+
+
+16 
+
+ 
+
+ 
+
+browser di komputer pengguna, sedangkan kode PHP diproses oleh server web, 
+
+baru kemudian hasilnya dikirimkan ke browser web. PHP banyak digunakan karena 
+
+bisa kita ubah dan kita gunakan secara bebas (Sujatmiko, 2012). 
+
+Seperti bahasa pemrograman lainnya, PHP juga memiliki aturan penulisan 
+
+seperti case sensitifity (perbedaan antara huruf besar dan kecil), cara mengakhiri 
+
+sebuah baris perintah, dan pengaruh penggunaan spasi dalam membuat kode 
+
+program PHP.  
+
+Berikut adalah aturan dasar penulisan kode program PHP: 
+
+1. Perbedaan Penulisan Huruf (Case Sensitivity) 
+
+PHP tidak membedakan huruf besar dan kecil (case insensitive) untuk 
+
+penamaan fungsi (function), nama class, maupun keyword bawaan PHP seperti 
+
+echo, while, dan class. Akan tetapi, PHP membedakan huruf besar dan huruf 
+
+kecil (case sensitive) untuk penamaan variabel, sehingga $nama, $Nama dan 
+
+$NAMA akan dianggap sebagai 3 variabel yang berbeda.  
+
+ 
+
+2. Penulisan Baris Perintah 
+
+Baris perintah(statement) di dalam PHP adalah kumpulan perintah PHP 
+
+yang menginstruksikan PHP untuk melakukan sesuatu. Baris perintah ini bisa 
+
+terdiri dari satu baris singkat (seperti perintah echo untuk menampilkan teks di 
+
+layar) atau bisa sesuatu yang lebih rumit dan terdiri dari beberapa baris, seperti 
+
+kondisi if, atau kode perulangan (loop).  
+
+PHP menggunakan tanda semicolon (titik koma) “;” sebagai tanda akhir 
+
+baris perintah. Sedangkan kumpulan baris perintah yang menggunakan tanda 
+
+kurung kurawal seperti kondisi IF atau perulangan (loop) tidak membutuhkan 
+
+tanda titik koma setelah kurung penutup. 
+
+ 
+
+3. Penggunaan Karakter Spasi, Enter, dan Tab (Whitespace) 
+
+Secara umum, karakter spasi dan tab diabaikan di dalam eksekusi 
+
+program PHP. Dalam menulis kode program php, programmer bisa memecah 
+
+
+
+17 
+
+ 
+
+ 
+
+sebuah statement menjadi beberapa baris, atau menyatukan beberapa statement 
+
+dalam sebuah baris yang panjang. 
+
+ 
+
+2.2.15. MySQL 
+
+MySQL adalah salah satu jenis database server yang sangat terkenal dan 
+
+banyak digunakan untuk membangun aplikasi web yang menggunakan database 
+
+sebagai sumber dan pengolahan datanya (M. Rudianto, 2011). 
+
+Kepopuleran MySQL antara lain karena MySQL menggunakan SQL 
+
+sebagai bahasa dasar untuk mengakses database sehingga mudah untuk digunakan, 
+
+kinerja query cepat, dan mencukupi untuk kebutuhan database perusahaan-
+
+perusahaan yang berskala kecil sampai menengah, MySQL juga bersifat open 
+
+source (tidak berbayar) . 
+
+MySQL merupakan database yang pertama kali didukung oleh bahasa 
+
+pemrograman script untuk internet (PHP dan Perl). MySQL dan PHP dianggap 
+
+sebagai pasangan software pembangun aplikasi web yang ideal. MySQL lebih 
+
+sering digunakan untuk membangun aplikasi berbasis web, umumnya 
+
+pengembangan aplikasinya menggunakan bahasa pemrograman script PHP. 
+
+ 
+
+2.2.16. XAMPP 
+
+XAMPP adalah sebuah software yang berfungsi untuk menjalankan website 
+
+berbasis PHP dan menggunakan pengolah data MySQL di komputer lokal. XAMPP 
+
+berperan sebagai server web pada komputer lokal. XAMPP juga dapat disebut 
+
+sebuah Cpanel server virtual, yang dapat membantu melakukan preview sehingga 
+
+dapat dimodifikasi website tanpa harus online atau terakses dengan internet (M. 
+
+Rudianto, 2011). 
+
+ 
+
+
+
+ 
+
+18 
+
+ 
+
+BAB III 
+
+METODOLOGI 
+
+ 
+
+Dalam penelitian ini, penulis menggunakan Model Driven Development 
+
+(MDD) yang di tulis oleh J. Whitten dan L. Bentley sebagai dasar metodologi 
+
+penelitian yang kemudian dikembangkan sesuai dengan kebutuhan penelitian 
+
+penulis. Berikut skema metodologi penelitian yang dibuat: 
+
+ 
+
+Gambar 3. 1. Metodologi Penelitian 
+
+
+
+19 
+
+ 
+
+ 
+
+3.1. Investigasi Pendahuluan  
+
+Dalam penelitian ini, penulis tergabung dalam sebuah tim project yang di 
+
+pimpin oleh M.Ridwan, S.T., M.T. untuk pengembangan Sistem Informasi 
+
+Akademik Program Studi Teknik Industri Fakultas Teknik Universitas Jendral 
+
+Achmad Yani.  
+
+Untuk melaksanakan penelitian yang tergabung dalam sebuah project,  
+
+penulis harus mendapatkan izin terlebih dahulu untuk melaksanakan penelitian. 
+
+Maka dari itu penulis meminta surat izin dari Program Studi Teknik Informatika 
+
+Fakultas Teknologi Informasi Universitas Bale Bandung untuk selanjutnya di 
+
+berikan kepada instansi tempat penelitian penulis yaitu Program Studi Teknik 
+
+Industri Fakultas Teknik Universitas Jendral Achmad Yani yang beralamat di Jl. 
+
+Ters. Jend. Gatot Subroto PO Box 807. 
+
+Karena penulis tergabung dalam sebuah tim project, penulis ditemani oleh 
+
+pimpinan project untuk meminta izin penelitian kepada pimpinan instansi tempat 
+
+penelitian penulis, yaitu kepada Ketua Program Studi Teknik Industri Fakultas 
+
+Teknik Universitas Jendral Achmad Yani. Kemudian tim project melakukan 
+
+pengumpulan data yang terkait terhadap konsep KKNI dan meminta struktur 
+
+organisasi yang ada di Jurusan Teknik Indsutri Fakultas Teknik Unjani. Berikut 
+
+struktur organisasi yang ada di tempat penelitian dan juga tempat project 
+
+berlangsung: 
+
+ 
+
+
+
+20 
+
+ 
+
+ 
+
+ 
+
+Gambar 3. 2. Struktur Orgasnisasi 
+
+ 
+
+3.2. Analisis Masalah 
+
+Di Program Studi Teknik Industri Universitas Achmad Yani, sistem 
+
+informasi akademik yang berjalan masih belum menggunakan sistem informasi 
+
+akademik berbasis KKNI. Berdasarkan Peraturan Presiden Nomor 8 Tahun 2012, 
+
+dan Undang-Undang Nomor 12 Tahun 2012, pemerintah telah menerbitkan 
+
+Kerangka Kualifikasi Nasional Indonesia (KKNI) tentang Pendidikan Tinggi untuk 
+
+mendorong semua perguruan tinggi menyesuaikan diri dengan ketentuan tersebut. 
+
+Oleh karena itu dibutuhkan pengembangan sistem informasi akademik yang 
+
+sebelumnya belum berbasis KKNI menjadi sistem informasi akademik yang 
+
+berbasis KKNI. Sehingga ada beberapa modul yang harus diubah dan dilakukan 
+
+pengembangan sistem agar sistem informasi akademik tersebut bisa memenuhi 
+
+kriteria Kerangka Kualifikasi Nasional Indonesia (KKNI). 
+
+ 
+
+ 
+
+
+
+21 
+
+ 
+
+ 
+
+3.3. Analisis Kebutuhan 
+
+3.3.1. Analisis Kebutuhan Pengembangan Sistem 
+
+Adapun analisis kebutuhan untuk pengembangan sistem informasi 
+
+akademik Program Studi Teknik Industri Fakultas Teknik Universitas Jendral 
+
+Achmad Yani dapat dibagi dalam beberapa modul sistem yaitu antara lain: 
+
+1. Akademik 
+
+a. Study Outcome 
+
+b. Tahun Akademik 
+
+c. Matakuliah 
+
+ Setup Learning Outcome  
+
+o Setup Assesment 
+
+2. Civitas 
+
+a. Dosen 
+
+b. Mahasiswa 
+
+3. Perkuliahan 
+
+a. Jadwal 
+
+ Nilai Assesment 
+
+b. KRS 
+
+c. KHS 
+
+ 
+
+3.3.2. Analisis Alat/Tools dalam Pengembangan Sistem 
+
+Setelah mengetahui kebutuhan dalam pengembangan sistem informasi yang 
+
+akan dibuat, berikut alat/tools yang dibutuhkan dalam proses pengembangan sistem 
+
+yang akan digunakan oleh penulis: 
+
+1. Satu unit laptop ASUS X441U dengan spesifikasi: CPU Intel Core i3-
+
+6006U 2.0GHz, RAM 4GB, HardDisk 500GB. 
+
+2. Sistem Operasi Windows 10 Pro. 
+
+3. Star UML versi 2.8 
+
+4. Balsamiq Mockup versi 3.5 
+
+
+
+22 
+
+ 
+
+ 
+
+5. XAMPP versi 3.2 
+
+6. PHP versi 5.6 
+
+7. MySQL versi 10.1 
+
+8. Google Chrome versi 67.0 
+
+9. Visual Studio Code versi 1.24 
+
+ 
+
+3.4. Analisis Keputusan 
+
+Adapun yang menjadi fokus penelitian penulis dalam pengembangan sistem 
+
+informasi akademik Program Studi Teknik Industri Fakultas Teknik Universitas 
+
+Achmad Yani adalah modul nilai Berbasis KKNI. 
+
+ 
+
+3.5. Perancangan 
+
+Setelah melakukan analisis kebutuhan, penulis akan membuat rancangan 
+
+sistem informasi akademik berbasis KKNI sesuai dengan kebutuhan yang telah 
+
+dibuat berdasarkan hasil analisis yang sudah dilaksanakan sebelumnya. Alat/tools 
+
+yang akan digunakan dalam tahap rancangan ini yaitu Star UML dan Balsamiq 
+
+Mockup. 
+
+Dalam perancangan sistem, penulis menggunakan Star UML. Tahap 
+
+pertama yaitu membuat use case diagram untuk menggambarkan fungsionalitas 
+
+utama setiap aktor pada sistem. Selanjutnya membuat activity diagram untuk 
+
+menggambarkan aliran dari suatu aktivitas ke aktivitas lainnya pada sistem. 
+
+Selanjutnya penulis membuat class diagram untuk menggambarkan bagaimana 
+
+relasi antar model dan fungsi-fungsi dalam model tersebut. Selanjutnya penulis 
+
+membuat ER diagram untuk menggambarkan relasi antar tabel. 
+
+Dalam perancangan user interface, penulis akan membuat mockup dengan 
+
+menggunakan aplikasi Balsamiq Mockup. Penulis akan membuat desain user 
+
+
+
+23 
+
+ 
+
+ 
+
+interface dengan memperhatikan desain yang user friendly, agar pengguna dapat 
+
+dengan mudah menggunakan sistem informasi yang dibangun. 
+
+ 
+
+3.6. Konstruksi / Coding 
+
+Dalam tahap ini dilakukan penulisan kode program. Pengembangan sistem 
+
+informasi akademik berbasis KKNI dipecah  menjadi  modul-modul  kecil  
+
+berdasarkan rancangan yang telah dibuat, modul yang menjadi fokus penulis yaitu 
+
+model yang berhubungan dengan pengelolaan nilai akademik, antara lain yaitu: 
+
+modul Nilai Akademik Berbasis KKNI. Beberapa alat/tools yang akan digunakan 
+
+dalam tahap ini yaitu antara lain XAMPP sebagai local server, PHP sebagai bahasa 
+
+pemrograman yang digunakan, MySQL sebagai database untuk penyimpanan data. 
+
+Google Chrome sebagai browser untuk menjalankan dan pengujian sistem. Visual 
+
+Studio Code digunakan sebagai text editor untuk membantu penulis dalam 
+
+menuliskan kode program. 
+
+ 
+
+3.7. Integrasi 
+
+Dalam tahapan ini, penulis bersama tim project mengintegrasikan setiap 
+
+modul-modul yang dibuat sebelumnya agar setiap modul yang membutuhkan 
+
+modul lainnya bisa berintegrasi dengan baik dan tidak ada masalah antara modul 
+
+satu dengan modul lainnya. Sehingga setelah setiap modul terintegrasi maka sistem 
+
+informasi yang dibuat menjadi sebuah sistem informasi akademik yang utuh yaitu 
+
+Sistem Informasi Akademik Jurusan Teknik Industri Fakultas Teknik Universitas 
+
+Jendral Achmad Yani. 
+
+ 
+
+ 
+
+
+
+24 
+
+ 
+
+ 
+
+3.8. Dokumentasi / Laporan Akhir 
+
+Tahap ini merupakan tahapan akhir dalam penelitian yang dilaksanakan 
+
+penulis, di tahap ini penulis bersama tim akan membuat dokumentasi sistem 
+
+informasi yang dibuat antara lain dokumentasi dalam instalasi dan penggunaan 
+
+sistem informasi akademik berbasis KKNI. Penulis juga akan melaksanakan 
+
+penyelesaian laporan akhir penelitian yaitu berupa skripsi.
+
+
+
+ 
+
+ 
+
+25 
+
+ 
+
+ 
+
+BAB IV 
+
+ANALISIS PERANCANGAN DAN HASIL 
+
+ 
+
+4.1. Analisis 
+
+4.1.1. Analisis Masalah 
+
+Dalam pelaksanaan penelitian di Program Studi Teknik Industri Universitas 
+
+Jendral Achmad Yani, penulis tergabung dalam sebuah project untuk 
+
+mengembangkan Sistem Informasi Akademik yang berbasis KKNI.  Fokus penulis 
+
+dalam project ini adalah untuk mengembangkan Sistem Informasi Akademik dalam 
+
+pengelolaan Nilai Matakuliah agar bisa mengikuti aturan atau alur sistem yang 
+
+sesuai dengan Kerangka Kualifikasi Nasional Indonesia atau biasa di singkat 
+
+KKNI. 
+
+Berdasarkan hasil dari wawancara dan observasi di Program Studi Teknik 
+
+Industri Universitas Jendral Achmad Yani. Berikut adalah contoh data yang 
+
+digunakan oleh Program Studi Teknik Industri dalam pengelolaan matakuliah 
+
+berbasis KKNI 
+
+Tabel 4. 1. Learning Outcome Matakuliah berdasarkan Study Outcome 
+
+Mata Kuliah Kode SKS Semester 
+
+Pemodelan Sistem TI-3132 3 5 
+
+Study Outcome / CPL dan Learning Outcome / CPMK 
+
+SO3: Menguasai Prinsip dan Teknik Perancangan Sistem terintegrasi dengan 
+
+pendekatan sistem 
+
+LO1 Mampu memahami ruang lingkup pemodelan sistem 
+
+LO2 Mampu memahami kerangka berpikir sistem 
+
+LO3 Mampu memahami konsep sistem 
+
+
+
+26 
+
+ 
+
+ 
+
+ 
+
+ 
+
+LO4 Mampu memahami dan menggunakan diagram-diagram pemodelan 
+
+SO5: Mampu mengidentifikasi, memformulasikan dan menganalisis masalah rekayasa 
+
+kompleks pada sistem terintegrasi berdasarkan pendekatan analitik, komputasional atau 
+
+eksperimental 
+
+LO5 
+Mampu memahami langkah-langkah pemodelan sistem dengan pendekatan 
+
+metodologi OR / MS 
+
+LO6 Mampu memformulasikan masalah 
+
+LO7 Mampu membangun model 
+
+LO8 Mampu membuat rancangan implementasi solusi 
+
+SO7: Mampu meneliti dan menyelidiki masalah rekayasa kompleks pada sistem 
+
+terintegrasi menggunakan dasar prinsip-prinsip rekayasa dan dengan melaksanakan 
+
+riset, analisis, interpretasi data dan sintesa informasi untuk memberikan solusi 
+
+LO9 
+Mampu memodelkan masalah deterministik (non pembatas dan dengan 
+
+pembatas) 
+
+LO10 Mampu memodelkan masalah probabilistik / stokastik 
+
+ 
+
+Tabel 4. 2. Bobot Assesment Matakuliah 
+
+LO LO1 LO2 LO3 LO4 LO5 LO6 LO7 LO8 LO9 LO10 
+
+Assesment 
+
+Tools 
+Kuis Kuis Kuis Kuis UTS UTS Tugas Tugas Tugas UAS Tugas UAS 
+
+Bobot (%) 2 2 3 3 15 15 5 5 10 15 10 15 
+
+Sub Total 
+
+(%) 
+2 2 3 3 15 15 5 5 25 25 
+
+Total (%) 100 
+
+ 
+
+
+
+27 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Tabel 4. 3. Nilai Assesment Matakuliah setiap Mahasiswa 
+
+Matakuliah Dosen Tahun Akademik 
+
+Pemodelan Sistem DR. Rinto Yusriski, ST., MT. 2017/2018 
+
+Mahasiswa 
+
+LO1 LO2 LO3 LO4 LO5 LO6 LO7 LO8 LO9 LO10 
+
+Kuis Kuis Kuis Kuis UTS UTS Tugas Tugas Tugas UAS Tugas UAS 
+
+Andika 
+
+Saputra 
+80 90 90 80 70 72 83 80 90 70 72 83 
+
+Budiman 
+
+Fajar 
+100 75 80 90 90 80 70 72 83 89 90 95 
+
+Hendra 
+
+Irawan 
+80 90 90 80 70 72 83 80 90 70 72 83 
+
+Ibnu Syina 70 72 83 89 70 72 83 80 90 90 80 70 
+
+Indra 
+
+Pratama 
+80 90 90 80 70 83 89 70 72 75 80 70 
+
+Ragan 
+
+Paramarta 
+80 90 90 80 70 72 83 80 90 70 72 83 
+
+Randi Dika 89 70 72 75 80 70 80 90 90 80 70 83 
+
+Rifki 
+
+Zulfikor 
+80 90 90 80 70 83 89 70 72 75 80 70 
+
+Rivaldi 89 70 72 75 80 70 80 90 90 80 70 83 
+
+Rizki 
+
+Nurohman 
+80 90 90 80 70 83 89 70 72 75 80 70 
+
+Sandia 89 70 72 75 80 70 80 90 90 80 70 83 
+
+Umam 
+
+Luqman 
+100 75 80 90 90 80 70 72 83 89 90 95 
+
+Yadi 
+
+Setiawan 
+70 72 83 89 70 72 83 80 90 90 80 70 
+
+ 
+
+
+
+28 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Berdasarkan contoh data di atas, untuk mengisi nilai mahasiswa dari suatu 
+
+matakuliah harus melewati tahapan – tahapan sebagai berikut: 
+
+1. Pengisian Data Study Outcome (Capaian Pembelajaran Lulusan). Data ini 
+
+bisa digunakan untuk beberapa matakuliah. 
+
+2. Pengisian Data Mata Kuliah. 
+
+3. Pengisian Data Learning Outcome (Capaian Pembelajaran Mata Kuliah) 
+
+dari suatu Matakuliah.  
+
+4. Pengisian Data Assesment beserta bobot nya dari setiap Learning Outcome 
+
+yang ada pada suatu Matakuliah. 
+
+5. Pengisian Nilai Assesment setiap Mahasiswa yang mengikuti Matakuliah 
+
+tersebut. 
+
+ 
+
+4.1.2. Analisis Software 
+
+Berikut kebutuhan software dalam pengembangan Sistem Informasi 
+
+Akademik berbasis KKNI dalam pengelolaan Nilai Matakuliah:  
+
+Software Software Minimun 
+
+Operating System Windows 7 64 bit 
+
+Web browser Google Chrome V 50 
+
+Localhost XAMPP V3.2.2 
+
+Text-editor Visual Studio Code V 1.24 
+
+ 
+
+ 
+
+4.1.3. Analisis Pengguna 
+
+Dalam pengelolaan Nilai Matakuliah di Sistem Informasi Akademik 
+
+berbasis KKNI, pengguna di bagi dalam 3 hak akses, yaitu sebagai berikut 
+
+
+
+29 
+
+ 
+
+ 
+
+ 
+
+ 
+
+1. Admin 
+
+Admin dapat mengelola data study outcome, data matakuliah 
+
+beserta setup learning outcome dan assesment suatu matakuliah,  admin 
+
+juga dapat mengelola nilai matakuliah setiap mahasiswa. 
+
+2. Dosen 
+
+Dosen dapat mengelola nilai matakuliah dari setiap mahasiswa 
+
+yang ada di jadwal matakuliah tersebut. 
+
+3. Mahasiswa 
+
+Mahasiswa dapat melihat nilai dari semua matakuliah yang telah 
+
+diselesaikannya. 
+
+ 
+
+4.1.4. User Interface 
+
+User interface yang dibuat berdasarkan permintaan dari client dari pihak 
+
+program studi teknik industri. Khususnya dalam pengelolaan matakuliah beserta 
+
+setup study outcome, learning outcome dan assesment, dan juga pengisian nilai 
+
+assesment mahasiswa, user interface yang diinginkan client tidak jauh berbeda 
+
+dengan tampilan tabel 4.1, tabel 4.2 dan tabel 4.3. yang selanjutnya tampilannya 
+
+akan sedikit diubah agar tampilan user interface nya menjadi user friendly. 
+
+ 
+
+4.1.5. Fitur-Fitur 
+
+Fitur – fitur yang dibuat dalam sistem informasi akademik ini dimaksudkan 
+
+agar sistem informasi akademik bisa berjalan sesuai dengan ketentuan KKNI, 
+
+khususnya dalam pengelolaan nilai. 
+
+Berikut adalah fitur – fitur yang disediakan oleh aplikasi ini: 
+
+1. Pengelolaan data study outcome yang selanjutnya bisa digunakan dalam 
+
+pengelolaan learning outcome. 
+
+
+
+30 
+
+ 
+
+ 
+
+ 
+
+ 
+
+2. Pengelolaan data matakuliah beserta learning outcome dan assesment 
+
+matakuliah tersebut, agar data matakuliah itu bisa sesuai dengan ketentuan 
+
+KKNI. 
+
+3. Pengelolaan data nilai setiap mahasiswa yang mengikuti jadwal kuliah. 
+
+4. Mencetak data matakuliah beserta learning outcome dan assesment 
+
+matakuliah tersebut. 
+
+5. Mencetak data nilai setiap mahasiswa yang mengikuti jadwal kuliah. 
+
+ 
+
+4.1.6. Analisis Data 
+
+Penganalisaan data berupa data masukan, keluaran, dan proses untuk 
+
+penunjang bagi sistem informasi akademik yang akan dibuat dalam pengelolaan 
+
+nilai matakuliah. 
+
+Tabel 4. 4. Analisis Data 
+
+Masukan Proses Keluaran 
+
+Data Study Outcome Tambah, Edit, Hapus 
+
+Data Study Outcome 
+
+Menampilkan Data 
+
+Study Outcome 
+
+Data Matakuliah Tambah, Edit, Hapus 
+
+Data Matakuliah 
+
+Menampilkan Data 
+
+Matakuliah 
+
+Data Learning Outcome Tambah, Edit, Hapus 
+
+Data Learning Outcome 
+
+Matakuliah 
+
+Menampilkan Data 
+
+Matakuliah beserta 
+
+semua Data Learning 
+
+Outcome yang berelasi 
+
+Data Assesment Tambah, Edit, Hapus 
+
+Data Assesment yang 
+
+ada pada setiap Learning 
+
+Outcome 
+
+Menampilkan Data 
+
+Matakuliah beserta 
+
+semua Data Learning 
+
+Outcome dan Assesment 
+
+tersebut 
+
+
+
+31 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Data Nilai Assesment 
+
+Mahasiswa 
+
+Tambah, Edit, Hapus 
+
+Data Nilai Assesment 
+
+Mahasiswa dalam 
+
+Jadwal Kuliah 
+
+Menampilkan Data Nilai 
+
+Assesment Mahasiswa 
+
+dalam Jadwal Kuliah 
+
+ 
+
+4.2. Perancangan 
+
+4.2.1. Unified Model Language (UML) 
+
+4.2.1.1. Use Case Diagram 
+
+Berikut adalah rancangan use case diagram dalam pengelolaan nilai di 
+
+Sistem Informasi Akademik Universitas Jendral Achmad Yani Program Studi 
+
+Teknik Industri 
+
+ 
+
+Gambar 4. 1. Use Case Diagram 
+
+ 
+
+4.2.1.2. Skenario Use Case 
+
+Berikut adalah deskripsi use case dalam pengelolaan nilai pada perancangan 
+
+Sistem Informasi Akademik berbasis KKNI Universitas Jendral Achmad Yani 
+
+Program Studi Teknik Industri 
+
+
+
+32 
+
+ 
+
+ 
+
+ 
+
+ 
+
+1. Use Case Login dan Logout 
+
+Tabel 4. 5. Use Case Login 
+
+Aksi Aktor Reaksi Sistem 
+
+Skenario Normal 
+
+ 1. Masuk ke Halaman Login 
+
+2. Input Email dan Password  
+
+ 
+3. Memeriksa valid tidaknya data 
+
+yang di input 
+
+ 4. Masuk ke Halaman Dashboard 
+
+Skenario Alternatif 
+
+ 1. Masuk ke Halaman Login 
+
+2. Input Email dan Password  
+
+ 
+3. Memeriksa valid tidaknya data 
+
+yang di input 
+
+ 
+4. Menampilkan pesan Login tidak 
+
+valid 
+
+ 
+
+Tabel 4. 6. Use Case Logout 
+
+Aksi Aktor Reaksi Sistem 
+
+Skenario Normal 
+
+1. Pilih tombol Logout  
+
+ 2. Redirect ke Halaman Login  
+
+ 
+
+2. Use Case Pengelolaan Study Outcome 
+
+Tabel 4. 7. Use Case Menampilkan Study Outcome 
+
+Aksi Aktor Reaksi Sistem 
+
+Skenario Normal 
+
+ 1. Memeriksa status Login 
+
+2. Pilih Menu Study Outcome  
+
+
+
+33 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+3. Menampilkan Halaman Study 
+
+Outcome 
+
+Skenario Alternatif 
+
+ 1. Memeriksa status Login 
+
+ 2. Redirect ke Halaman Login 
+
+ 
+
+Tabel 4. 8. Use Case Input Study Outcome 
+
+Aksi Aktor Reaksi Sistem 
+
+Skenario Normal 
+
+1. Pilih Menu Study Outcome  
+
+ 
+2. Menampilkan Halaman Study 
+
+Outcome 
+
+3. Pilih Tambah Study Outcome  
+
+ 
+4. Menampilkan Form Tambah Study 
+
+Outcome 
+
+5. Input Data Study Outcome  
+
+ 6. Data Study Outcome di Simpan 
+
+Skenario Alternatif 
+
+1. Pilih Menu Study Outcome  
+
+ 
+2. Menampilkan Halaman Study 
+
+Outcome 
+
+3. Pilih Tambah Study Outcome  
+
+ 
+4. Menampilkan Form Tambah Study 
+
+Outcome 
+
+5. Pilih Batal Simpan  
+
+ 
+6. Kembali ke Halaman Study 
+
+Outcome 
+
+ 
+
+Tabel 4. 9. Use Case Edit Study Outcome 
+
+Aksi Aktor Reaksi Sistem 
+
+Skenario Normal 
+
+1. Pilih Menu Study Outcome  
+
+ 
+2. Menampilkan Halaman Study 
+
+Outcome 
+
+
+
+34 
+
+ 
+
+ 
+
+ 
+
+ 
+
+3. Pilih Edit Study Outcome  
+
+ 
+4. Menampilkan Form Edit Study 
+
+Outcome 
+
+5. Edit Data Study Outcome  
+
+ 6. Data Study Outcome di Update 
+
+Skenario Alternatif 
+
+1. Pilih Menu Study Outcome  
+
+ 
+2. Menampilkan Halaman Study 
+
+Outcome 
+
+3. Pilih Edit Study Outcome  
+
+ 
+4. Menampilkan Form Edit Study 
+
+Outcome 
+
+5. Pilih Batal Edit  
+
+ 
+6. Kembali ke Halaman Study 
+
+Outcome 
+
+ 
+
+Tabel 4. 10. Use Case Hapus Study Outcome 
+
+Aksi Aktor Reaksi Sistem 
+
+Skenario Normal 
+
+1. Pilih Menu Study Outcome  
+
+ 
+2. Menampilkan Halaman Study 
+
+Outcome 
+
+3. Pilih Hapus Study Outcome  
+
+ 
+4. Menampilkan Konfirmasi 
+
+Peringatan Hapus Study Outcome 
+
+5. Pilih Hapus  
+
+ 6. Data Study Outcome di Hapus 
+
+Skenario Alternatif 
+
+1. Pilih Menu Study Outcome  
+
+ 
+2. Menampilkan Halaman Study 
+
+Outcome 
+
+3. Pilih Hapus Study Outcome  
+
+ 
+4. Menampilkan Konfirmasi 
+
+Peringatan Hapus Study Outcome 
+
+5. Pilih Batal  
+
+
+
+35 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+6. Data Study Outcome Tidak di 
+
+Hapus 
+
+ 
+
+3. Use Case Pengelolaan Matakuliah 
+
+Tabel 4. 11. Use Case Menampilkan Matakuliah 
+
+Aksi Aktor Reaksi Sistem 
+
+Skenario Normal 
+
+ 1. Memeriksa status Login 
+
+2. Pilih Menu Matakuliah  
+
+ 
+3. Menampilkan Halaman 
+
+Matakuliah 
+
+Skenario Alternatif 
+
+ 1. Memeriksa status Login 
+
+ 2. Redirect ke Halaman Login 
+
+ 
+
+Tabel 4. 12. Use Case Input Matakuliah 
+
+Aksi Aktor Reaksi Sistem 
+
+Skenario Normal 
+
+1. Pilih Menu Matakuliah  
+
+ 
+2. Menampilkan Halaman 
+
+Matakuliah 
+
+3. Pilih Tambah Matakuliah  
+
+ 
+4. Menampilkan Form Tambah 
+
+Matakuliah 
+
+5. Input Data Matakuliah  
+
+ 6. Data Matakuliah di Simpan 
+
+Skenario Alternatif 
+
+1. Pilih Menu Matakuliah  
+
+ 
+2. Menampilkan Halaman 
+
+Matakuliah 
+
+3. Pilih Tambah Matakuliah  
+
+
+
+36 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+4. Menampilkan Form Tambah 
+
+Matakuliah 
+
+5. Pilih Batal Simpan  
+
+ 6. Kembali ke Halaman Matakuliah 
+
+ 
+
+Tabel 4. 13. Use Case Edit Matakuliah 
+
+Aksi Aktor Reaksi Sistem 
+
+Skenario Normal 
+
+1. Pilih Menu Matakuliah  
+
+ 
+2. Menampilkan Halaman 
+
+Matakuliah 
+
+3. Pilih Edit Matakuliah  
+
+ 
+4. Menampilkan Form Edit 
+
+Matakuliah 
+
+5. Edit Data Matakuliah  
+
+ 6. Data Matakuliah di Update 
+
+Skenario Alternatif 
+
+1. Pilih Menu Matakuliah  
+
+ 
+2. Menampilkan Halaman 
+
+Matakuliah 
+
+3. Pilih Edit Matakuliah  
+
+ 
+4. Menampilkan Form Edit 
+
+Matakuliah 
+
+5. Pilih Batal Edit  
+
+ 6. Kembali ke Halaman Matakuliah 
+
+ 
+
+Tabel 4. 14. Use Case Hapus Matakuliah 
+
+Aksi Aktor Reaksi Sistem 
+
+Skenario Normal 
+
+1. Pilih Menu Matakuliah  
+
+ 
+2. Menampilkan Halaman 
+
+Matakuliah 
+
+3. Pilih Hapus Matakuliah  
+
+
+
+37 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+4. Menampilkan Konfirmasi 
+
+Peringatan Hapus Matakuliah 
+
+5. Pilih Hapus  
+
+ 6. Data Matakuliah di Hapus 
+
+Skenario Alternatif 
+
+1. Pilih Menu Matakuliah  
+
+ 
+2. Menampilkan Halaman 
+
+Matakuliah 
+
+3. Pilih Hapus Matakuliah  
+
+ 
+4. Menampilkan Konfirmasi 
+
+Peringatan Hapus Matakuliah 
+
+5. Pilih Batal  
+
+ 6. Data Matakuliah Tidak di Hapus 
+
+ 
+
+4. Use Case Pengelolaan Learning Outcome Matakuliah 
+
+Tabel 4. 15. Use Case Menampilkan Learning Outcome Matakuliah 
+
+Aksi Aktor Reaksi Sistem 
+
+Skenario Normal 
+
+ 1. Memeriksa status Login 
+
+2. Pilih Menu Learning Outcome 
+Matakuliah 
+
+ 
+
+ 
+3. Menampilkan Halaman Learning 
+
+Outcome Matakuliah 
+
+Skenario Alternatif 
+
+ 1. Memeriksa status Login 
+
+ 2. Redirect ke Halaman Login 
+
+ 
+
+Tabel 4. 16. Use Case Input Learning Outcome Matakuliah 
+
+Aksi Aktor Reaksi Sistem 
+
+Skenario Normal 
+
+1. Pilih Menu Learning Outcome 
+Matakuliah 
+
+ 
+
+
+
+38 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+2. Menampilkan Halaman Learning 
+
+Outcome Matakuliah 
+
+3. Pilih Tambah Learning Outcome 
+Matakuliah 
+
+ 
+
+ 
+4. Menampilkan Form Tambah 
+
+Learning Outcome Matakuliah 
+
+5. Input Data Learning Outcome 
+Matakuliah 
+
+ 
+
+ 
+6. Data Learning Outcome 
+
+Matakuliah di Simpan 
+
+Skenario Alternatif 
+
+1. Pilih Menu Learning Outcome 
+Matakuliah 
+
+ 
+
+ 
+2. Menampilkan Halaman Learning 
+
+Outcome Matakuliah 
+
+3. Pilih Tambah Learning Outcome 
+Matakuliah 
+
+ 
+
+ 
+4. Menampilkan Form Tambah 
+
+Learning Outcome Matakuliah 
+
+5. Pilih Batal Simpan  
+
+ 
+6. Kembali ke Halaman Learning 
+
+Outcome Matakuliah 
+
+ 
+
+Tabel 4. 17. Use Case Edit Learning Outcome Matakuliah 
+
+Aksi Aktor Reaksi Sistem 
+
+Skenario Normal 
+
+1. Pilih Menu Learning Outcome 
+Matakuliah 
+
+ 
+
+ 
+2. Menampilkan Halaman Learning 
+
+Outcome Matakuliah 
+
+3. Pilih Edit Learning Outcome 
+Matakuliah 
+
+ 
+
+ 
+4. Menampilkan Form Edit Learning 
+
+Outcome Matakuliah 
+
+5. Edit Data Learning Outcome 
+Matakuliah 
+
+ 
+
+ 
+6. Data Learning Outcome 
+
+Matakuliah di Update 
+
+Skenario Alternatif 
+
+1. Pilih Menu Learning Outcome 
+Matakuliah 
+
+ 
+
+
+
+39 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+2. Menampilkan Halaman Learning 
+
+Outcome Matakuliah 
+
+3. Pilih Edit Learning Outcome 
+Matakuliah 
+
+ 
+
+ 
+4. Menampilkan Form Edit Learning 
+
+Outcome Matakuliah 
+
+5. Pilih Batal Edit  
+
+ 
+6. Kembali ke Halaman Learning 
+
+Outcome Matakuliah 
+
+ 
+
+Tabel 4. 18. Use Case Hapus Learning Outcome Matakuliah 
+
+Aksi Aktor Reaksi Sistem 
+
+Skenario Normal 
+
+1. Pilih Menu Learning Outcome 
+Matakuliah 
+
+ 
+
+ 
+2. Menampilkan Halaman Learning 
+
+Outcome Matakuliah 
+
+3. Pilih Hapus Learning Outcome 
+Matakuliah 
+
+ 
+
+ 
+
+4. Menampilkan Konfirmasi 
+Peringatan Hapus Learning 
+
+Outcome Matakuliah 
+
+5. Pilih Hapus  
+
+ 
+6. Data Learning Outcome 
+
+Matakuliah di Hapus 
+
+Skenario Alternatif 
+
+1. Pilih Menu Learning Outcome 
+Matakuliah 
+
+ 
+
+ 
+2. Menampilkan Halaman Learning 
+
+Outcome Matakuliah 
+
+3. Pilih Hapus Learning Outcome 
+Matakuliah 
+
+ 
+
+ 
+
+4. Menampilkan Konfirmasi 
+Peringatan Hapus Learning 
+
+Outcome Matakuliah 
+
+5. Pilih Batal  
+
+ 
+6. Data Learning Outcome 
+
+Matakuliah Tidak di Hapus 
+
+ 
+
+ 
+
+
+
+40 
+
+ 
+
+ 
+
+ 
+
+ 
+
+5. Use Case Pengelolaan Assesment Matakuliah 
+
+Tabel 4. 19. Use Case Menampilkan Assesment Matakuliah 
+
+Aksi Aktor Reaksi Sistem 
+
+Skenario Normal 
+
+ 1. Memeriksa status Login 
+
+2. Pilih Menu Assesment Matakuliah  
+
+ 
+3. Menampilkan Halaman Assesment 
+
+Matakuliah 
+
+Skenario Alternatif 
+
+ 1. Memeriksa status Login 
+
+ 2. Redirect ke Halaman Login 
+
+ 
+
+Tabel 4. 20. Use Case Input Assesment Matakuliah 
+
+Aksi Aktor Reaksi Sistem 
+
+Skenario Normal 
+
+1. Pilih Menu Assesment Matakuliah  
+
+ 
+2. Menampilkan Halaman Assesment 
+
+Matakuliah 
+
+3. Pilih Tambah Assesment 
+Matakuliah 
+
+ 
+
+ 
+4. Menampilkan Form Tambah 
+
+Assesment Matakuliah 
+
+5. Input Data Assesment Matakuliah  
+
+ 
+6. Data Assesment Matakuliah di 
+
+Simpan 
+
+Skenario Alternatif 
+
+1. Pilih Menu Assesment Matakuliah  
+
+ 
+2. Menampilkan Halaman Assesment 
+
+Matakuliah 
+
+3. Pilih Tambah Assesment 
+Matakuliah 
+
+ 
+
+ 
+4. Menampilkan Form Tambah 
+
+Assesment Matakuliah 
+
+5. Pilih Batal Simpan  
+
+
+
+41 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+6. Kembali ke Halaman Assesment 
+
+Matakuliah 
+
+ 
+
+Tabel 4. 21. Use Case Edit Assesment Matakuliah 
+
+Aksi Aktor Reaksi Sistem 
+
+Skenario Normal 
+
+1. Pilih Menu Assesment Matakuliah  
+
+ 
+2. Menampilkan Halaman Assesment 
+
+Matakuliah 
+
+3. Pilih Edit Assesment Matakuliah  
+
+ 
+4. Menampilkan Form Edit 
+
+Assesment Matakuliah 
+
+5. Edit Data Assesment Matakuliah  
+
+ 
+6. Data Assesment Matakuliah di 
+
+Update 
+
+Skenario Alternatif 
+
+1. Pilih Menu Assesment Matakuliah  
+
+ 
+2. Menampilkan Halaman Assesment 
+
+Matakuliah 
+
+3. Pilih Edit Assesment Matakuliah  
+
+ 
+4. Menampilkan Form Edit 
+
+Assesment Matakuliah 
+
+5. Pilih Batal Edit  
+
+ 
+6. Kembali ke Halaman Assesment 
+
+Matakuliah 
+
+ 
+
+Tabel 4. 22. Use Case Hapus Assesment Matakuliah 
+
+Aksi Aktor Reaksi Sistem 
+
+Skenario Normal 
+
+1. Pilih Menu Assesment Matakuliah  
+
+ 
+2. Menampilkan Halaman Assesment 
+
+Matakuliah 
+
+3. Pilih Hapus Assesment Matakuliah  
+
+ 
+
+4. Menampilkan Konfirmasi 
+Peringatan Hapus Assesment 
+
+Matakuliah 
+
+
+
+42 
+
+ 
+
+ 
+
+ 
+
+ 
+
+5. Pilih Hapus  
+
+ 
+6. Data Assesment Matakuliah di 
+
+Hapus 
+
+Skenario Alternatif 
+
+1. Pilih Menu Assesment Matakuliah  
+
+ 
+2. Menampilkan Halaman Assesment 
+
+Matakuliah 
+
+3. Pilih Hapus Assesment Matakuliah  
+
+ 
+
+4. Menampilkan Konfirmasi 
+Peringatan Hapus Assesment 
+
+Matakuliah 
+
+5. Pilih Batal  
+
+ 
+6. Data Assesment Matakuliah Tidak 
+
+di Hapus 
+
+ 
+
+6. Use Case Pengelolaan Nilai Assesment 
+
+Tabel 4. 23. Use Case Menampilkan Nilai Assesment 
+
+Aksi Aktor Reaksi Sistem 
+
+Skenario Normal 
+
+ 1. Memeriksa status Login 
+
+2. Pilih Menu Nilai Assesment  
+
+ 
+3. Menampilkan Halaman Nilai 
+
+Assesment 
+
+Skenario Alternatif 
+
+ 1. Memeriksa status Login 
+
+ 2. Redirect ke Halaman Login 
+
+ 
+
+Tabel 4. 24. Use Case Input Nilai Assesment 
+
+Aksi Aktor Reaksi Sistem 
+
+Skenario Normal 
+
+1. Pilih Menu Nilai Assesment  
+
+ 
+2. Menampilkan Halaman Nilai 
+
+Assesment 
+
+
+
+43 
+
+ 
+
+ 
+
+ 
+
+ 
+
+3. Pilih Tambah Nilai Assesment  
+
+ 
+4. Menampilkan Form Tambah Nilai 
+
+Assesment 
+
+5. Input Data Nilai Assesment  
+
+ 6. Data Nilai Assesment di Simpan 
+
+Skenario Alternatif 
+
+1. Pilih Menu Nilai Assesment  
+
+ 
+2. Menampilkan Halaman Nilai 
+
+Assesment 
+
+3. Pilih Tambah Nilai Assesment  
+
+ 
+4. Menampilkan Form Tambah Nilai 
+
+Assesment 
+
+5. Pilih Batal Simpan  
+
+ 
+6. Kembali ke Halaman Nilai 
+
+Assesment 
+
+ 
+
+Tabel 4. 25. Use Case Edit Nilai Assesment 
+
+Aksi Aktor Reaksi Sistem 
+
+Skenario Normal 
+
+1. Pilih Menu Nilai Assesment  
+
+ 
+2. Menampilkan Halaman Nilai 
+
+Assesment 
+
+3. Pilih Edit Nilai Assesment  
+
+ 
+4. Menampilkan Form Edit Nilai 
+
+Assesment 
+
+5. Edit Data Nilai Assesment  
+
+ 6. Data Nilai Assesment di Update 
+
+Skenario Alternatif 
+
+1. Pilih Menu Nilai Assesment  
+
+ 
+2. Menampilkan Halaman Nilai 
+
+Assesment 
+
+3. Pilih Edit Nilai Assesment  
+
+ 
+4. Menampilkan Form Edit Nilai 
+
+Assesment 
+
+5. Pilih Batal Edit  
+
+
+
+44 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+6. Kembali ke Halaman Nilai 
+
+Assesment 
+
+ 
+
+Tabel 4. 26. Use Case Hapus Nilai Assesment 
+
+Aksi Aktor Reaksi Sistem 
+
+Skenario Normal 
+
+1. Pilih Menu Nilai Assesment  
+
+ 
+2. Menampilkan Halaman Nilai 
+
+Assesment 
+
+3. Pilih Hapus Nilai Assesment  
+
+ 
+4. Menampilkan Konfirmasi 
+
+Peringatan Hapus Nilai Assesment 
+
+5. Pilih Hapus  
+
+ 6. Data Nilai Assesment di Hapus 
+
+Skenario Alternatif 
+
+1. Pilih Menu Nilai Assesment  
+
+ 
+2. Menampilkan Halaman Nilai 
+
+Assesment 
+
+3. Pilih Hapus Nilai Assesment  
+
+ 
+4. Menampilkan Konfirmasi 
+
+Peringatan Hapus Nilai Assesment 
+
+5. Pilih Batal  
+
+ 
+6. Data Nilai Assesment Tidak di 
+
+Hapus 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+45 
+
+ 
+
+ 
+
+ 
+
+ 
+
+4.2.1.3. Activity Diagram 
+
+Berikut Activity diagram dalam pengelolaan nilai yang menunjukkan 
+
+aktivitas yang dilakukan user dan timbal balik dari sistem terhadap aktivitas user 
+
+secara sistematis.  
+
+ 
+
+Gambar 4. 2. Acivity Diagram Login 
+
+
+
+46 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Gambar 4. 3. Activity Diagram Study Outcome 
+
+ 
+
+
+
+47 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Gambar 4. 4. Activity Diagram Tambah Study Outcome 
+
+
+
+48 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Gambar 4. 5. Activity Diagram Edit Study Outcome 
+
+
+
+49 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Gambar 4. 6. Activity Diagram Hapus Study Outcome 
+
+ 
+
+
+
+50 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Gambar 4. 7. Activity Diagram Matakuliah 
+
+ 
+
+ 
+
+
+
+51 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Gambar 4. 8. Activity Diagram Tambah Matakuliah 
+
+ 
+
+
+
+52 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Gambar 4. 9. Activity Diagram Edit Matakuliah 
+
+
+
+53 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Gambar 4. 10. Activity Diagram Hapus Matakuliah 
+
+
+
+54 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Gambar 4. 11. Activity Diagram Learning Outcome Matakuliah 
+
+ 
+
+
+
+55 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Gambar 4. 12. Activity Diagram Tambah Learning Outcome Matakuliah 
+
+
+
+56 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Gambar 4. 13. Activity Diagram Edit Learning Outcome Matakuliah 
+
+
+
+57 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Gambar 4. 14. Activity Diagram Hapus Learning Outcome Matakuliah 
+
+
+
+58 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Gambar 4. 15. Activity Diagram Assesment Matakuliah 
+
+ 
+
+ 
+
+
+
+59 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Gambar 4. 16. Activity Diagram Tambah Assesment Matakuliah 
+
+
+
+60 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Gambar 4. 17. Activity Diagram Edit Assesment Matakuliah 
+
+
+
+61 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Gambar 4. 18. Activity Diagram Hapus Assesment Matakuliah 
+
+
+
+62 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Gambar 4. 19. Activity Diagram Nilai Assesment 
+
+ 
+
+
+
+63 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Gambar 4. 20. Activity Diagram Tambah Nilai Assesment 
+
+
+
+64 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Gambar 4. 21. Activity Diagram Edit Nilai Assesment 
+
+
+
+65 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Gambar 4. 22. Activity Diagram Hapus Nilai Assesment 
+
+
+
+66 
+
+ 
+
+ 
+
+ 
+
+ 
+
+4.2.1.4. Class Diagram 
+
+Berikut adalah rancangan class diagram yang menunjukkan model-model 
+
+yang berhubungan dengan pengelolaan nilai di Sistem Informasi Akademik 
+
+berbasis KKNI Universitas Jendral Achmad Yani Program Studi Teknik Industri. 
+
+ 
+
+Gambar 4. 23. Class Diagram 
+
+
+
+67 
+
+ 
+
+ 
+
+ 
+
+ 
+
+4.2.2. Struktur Tabel 
+
+Berikut adalah struktur tabel yang berhubungan dengan pengelolaan nilai di 
+
+Sistem Informasi Akademik Berbasis KKNI Universitas Jendral Achmad Yani 
+
+Program Studi Teknik Industri 
+
+Tabel 4. 27. Struktur Tabel study_outcome 
+
+Field Type Keterangan 
+
+id smallint(5) primary key, unsigned, auto increment 
+
+kode varchar(20)  
+
+deskripsi text  
+
+program_studi_id tinyint(3) foreign key: program_studi, unsigned 
+
+ 
+
+Tabel 4. 28. Struktur Tabel matakuliah 
+
+Field Type Keterangan 
+
+id smallint(5) primary key, unsigned, auto increment 
+
+kode varchar(20) unique 
+
+nama varchar(50)  
+
+sks tinyint(4) unsigned 
+
+semester tinyint(4) unsigned 
+
+program_studi_id tinyint(3) foreign key: program_studi, unsigned 
+
+ 
+
+Tabel 4. 29. Struktur Tabel learning_outcome 
+
+Field Type Keterangan 
+
+id smallint(5) primary key, unsigned, auto increment 
+
+kode varchar(20)  
+
+deskripsi text  
+
+matakuliah_id smallint(5) foreign key: matakuliah, unsigned 
+
+study_outcome_id smallint(5) foreign key: study_outcome, unsigned 
+
+ 
+
+
+
+68 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Tabel 4. 30. Struktur Tabel assesment 
+
+Field Type Keterangan 
+
+id mediumint (8) primary key, unsigned, auto increment 
+
+metode varchar(50)  
+
+bobot tinyint(4) unsigned 
+
+matakuliah_id smallint(5) foreign key: matakuliah, unsigned 
+
+study_outcome_id smallint(5) foreign key: study_outcome, unsigned 
+
+ 
+
+Tabel 4. 31. Struktur Tabel nilai_assesment 
+
+Field Type Keterangan 
+
+id mediumint(8) primary key, unsigned, auto increment 
+
+nilai decimal(5,2) unsigned 
+
+detail_krs_id mediumint (8) foreign key: detail_krs, unsigned 
+
+assesment_id mediumint (8) foreign key: assesment, unsigned 
+
+ 
+
+ 
+
+4.2.3. Desain 
+
+Berikut perancangan user interface Sistem Informasi Akademik berbasis 
+
+KKNI Universitas Jendral Achmad Yani Program Studi Teknik Industri dalam 
+
+pengelolaan nilai matakuliah, yaitu antara lain perancangan halaman study 
+
+outcome, matakuliah, learning outcome dan assesment matakuliah dan nilai 
+
+assesment setiap mahasiswa dalam jadwal kuliah. 
+
+ 
+
+4.2.3.1. Halaman Setup Study Outcome 
+
+
+
+69 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Gambar 4. 24. Desain Halaman Study Outcome 
+
+ 
+
+ 
+
+Gambar 4. 25. Desain Modal Tambah Study Outcome 
+
+ 
+
+
+
+70 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Gambar 4. 26. Desain Modal Edit Study Outcome 
+
+ 
+
+ 
+
+Gambar 4. 27. Desain Modal Konfirmasi Hapus Study Outcome 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+71 
+
+ 
+
+ 
+
+ 
+
+ 
+
+4.2.3.2. Halaman Matakuliah 
+
+ 
+
+Gambar 4. 28. Desain Halaman Matakuliah 
+
+ 
+
+ 
+
+Gambar 4. 29. Desain Modal Tambah Matakuliah 
+
+ 
+
+ 
+
+Gambar 4. 30. Desain Modal Edit Matakuliah 
+
+
+
+72 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Gambar 4. 31. Desain Modal Konfirmasi Hapus Matakuliah 
+
+ 
+
+4.2.3.3. Halaman Setup Learning Outcome dan Assesment Matakuliah 
+
+4.2.3.3.1. Tab Setup Learning Outcome dan Assesment Matakuliah 
+
+ 
+
+Gambar 4. 32. Desain Tab Setup Learning Outcome dan Assesment Matakuliah 
+
+ 
+
+
+
+73 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Gambar 4. 33. Desain Modal Tambah Learning Outcome 
+
+ 
+
+ 
+
+Gambar 4. 34. Desain Modal Edit Learning Outcome 
+
+ 
+
+ 
+
+Gambar 4. 35. Desain Modal Konfirmasi Hapus Learning Outcome 
+
+ 
+
+
+
+74 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Gambar 4. 36. Desain Modal Tambah Assesment 
+
+ 
+
+ 
+
+Gambar 4. 37. Desain Modal Edit Assesment 
+
+ 
+
+ 
+
+Gambar 4. 38. Desain Modal Konfirmasi Hapus Assesment 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+75 
+
+ 
+
+ 
+
+ 
+
+ 
+
+4.2.3.3.2. Tab Setup Bobot Assesment 
+
+ 
+
+Gambar 4. 39. Desain Tab Setup Bobot Assesment 
+
+ 
+
+4.2.3.3.3. Report Rencana Pembelajaran Semester (RPS) 
+
+
+
+76 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Gambar 4. 40. Desain Report Rencana Pembelajaran Semester (RPS) 
+
+ 
+
+4.2.3.4. Halaman Nilai Assesment Matakuliah Setiap Mahasiswa 
+
+
+
+77 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Gambar 4. 41. Desain Halaman Nilai Assesment Matakuliah Setiap Mahasiswa 
+
+ 
+
+ 
+
+Gambar 4. 42. Desain Report Nilai Assesment Matakuliah Setiap Mahasiswa 
+
+ 
+
+4.2.3.5. Halaman Study Outcome Mahasiswa 
+
+
+
+78 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Gambar 4. 43. Desain Halaman Study Outcome Mahasiswa 
+
+ 
+
+ 
+
+Gambar 4. 44. Desain Report Study Outcome Mahasiswa 
+
+ 
+
+ 
+
+
+
+79 
+
+ 
+
+ 
+
+ 
+
+ 
+
+4.3. Hasil 
+
+4.3.1. Spesifikasi Sistem 
+
+4.3.1.1. Perangkat Keras 
+
+Berikut adalah spesifikasi minimal perangkat keras agar dapat menjalankan 
+
+sistem informasi akademik ini: 
+
+Tabel 4. 32. Spesifikasi minimal perangkat keras 
+
+No Perangkat Keras Spesifikasi Minimal 
+
+Server Side 
+
+1 Komputer Server 
+
+Processor dualcore 
+
+RAM 4 GB 
+
+HDD 120 GB 
+
+Client Side 
+
+1 Personal Komputer 
+Procesor Pentium IV 
+
+RAM 1GB  
+
+ 
+
+4.3.1.2. Perangkat Lunak  
+
+Berikut adalah spesifikasi minimal perangkat lunak agar dapat menjalankan 
+
+sistem informasi akademik ini: 
+
+Tabel 4. 33. Spesifikasi minimal perangkat lunak 
+
+No Perangkat Lunak Spesifikasi Minimal 
+
+Server Side 
+
+1 Sistem Operasi Windows server 2003, linux (debian 5) 
+
+2 Web server Apache 2 
+
+3 Lampp / Xampp 3.2.2 
+
+Client Side 
+
+1 Sistem Operasi Windows 7  
+
+
+
+80 
+
+ 
+
+ 
+
+ 
+
+ 
+
+2 Browser Google chrome 50, Mozilla firefox 50 
+
+ 
+
+ 
+
+4.3.2. Instalasi Sistem  
+
+4.3.2.1. Instalasi Aplikasi  
+
+Untuk menginstal Sistem Informasi Akademik ini, pastikan sebelumnya 
+
+bahwa di komputer server telah terpasang XAMPP bagi pengguna sistem operasi 
+
+Windows, atau LAMPP bagi pengguna sistem operasi Linux, atau bagi pengguna 
+
+linux server sudah terinstal paket apache 2, PHP dan mysql. Pada penelitian ini, 
+
+penulis melakukan instalasi Sistem Informasi Akademik di Windows 10 yang telah 
+
+terinstal xampp v3.2.2. 
+
+1. Siapkan terlebih dahulu folder siakad-unjani beserta semua file di dalamnya 
+
+ 
+
+Gambar 4. 45. Folder siakad-unjani 
+
+ 
+
+2. Copy-paste folder siakad-unjani ke direktori folder c:\xampp\htdocs 
+
+
+
+81 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Gambar 4. 46. Folder siakad-unjani di htdocs 
+
+ 
+
+3. Buka XAMPP kemudian jalankan Apache dan MySQL’ 
+
+ 
+
+Gambar 4. 47. Tampilan XAMPP 
+
+ 
+
+4. Klik button Shell yang ada pada XAMPP untuk membuka Command Prompt, 
+
+kemudian ketikkan command seperti ini untuk menjalankan server localhost: 
+
+
+
+82 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Gambar 4. 48. command php artisan serve 
+
+ 
+
+5. Buka browser kemudian akses localhost:8000, jika user di redirect ke halaman 
+
+Login, maka proses instalasi Sistem Informasi Akademik Berhasil. 
+
+ 
+
+Gambar 4. 49. Redirect Login SIAKAD 
+
+ 
+
+4.3.2.2. Instalasi Database 
+
+1. Buka browser kemudian akses localhost/phpmyadmin,  
+
+ 
+
+Gambar 4. 50. Localhost/phpmyadmin 
+
+ 
+
+2. Buat database baru dengan nama “siakad-unjani” 
+
+
+
+83 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Gambar 4. 51. Create database siakad-unjani 
+
+ 
+
+3. Buka command promt, Pindahkan ke direktori “siakad-unjani”. Kemudian 
+
+jalankan command “php artisan migrate --seed” untuk instalasi tabel – tabel 
+
+beserta data dummy nya di database siakad-unjani. 
+
+ 
+
+Gambar 4. 52. php artisan migrate --seed 
+
+ 
+
+4. Kemudian jalankan server dengan command “php artisan serve” 
+
+ 
+
+Gambar 4. 53. Command php artisan serve 
+
+ 
+
+
+
+84 
+
+ 
+
+ 
+
+ 
+
+ 
+
+5. Buka browser kemudian akses localhost:8000/login. Kemudian masukan email 
+
+dan password berikut untuk masuk ke Sistem Informasi Akademik:  
+
+ Email: administrator@gmail.com 
+
+ Password: 123456 
+
+ 
+
+Gambar 4. 54. Login SIAKAD 
+
+ 
+
+6. Jika berhasil login dan user di redirect ke halaman Dashboard, maka bisa 
+
+dipastikan database berhasil terinstal 
+
+ 
+
+Gambar 4. 55. Halaman Dashboard 
+
+ 
+
+4.3.3. Menjalankan Sistem 
+
+
+
+85 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Dalam pengembangan sistem informasi akademik ini, penulis tergabung 
+
+dalam sebuah team project. Bagian sistem yang menjadi tugas dan juga penelitian 
+
+penulis yaitu pengelolaan nilai agar bisa mengikuti sesuai dengan ketentuan KKNI. 
+
+Modul yang dikelola yaitu antara lain: Study Outcome, Matakuliah, Learning 
+
+Outcome, Assesment dan Nilai Assesment. 
+
+ 
+
+4.3.3.1. Halaman Login 
+
+User harus login terlebih dahulu untuk mengakses Sistem Informasi 
+
+akademik ini, berikut tampilan login beserta email dan password default untuk 
+
+login: 
+
+ Email: administrator@gmail.com 
+
+ Password: 123456 
+
+ 
+
+Gambar 4. 56. Halaman Login 
+
+ 
+
+4.3.3.2. Halaman Dashboard 
+
+Halaman ini akan tampil bila user berhasil login ke Sistem Informasi 
+
+Akademik. Di halaman ini berisi semua modul utama yang ada di sistem informasi 
+
+akademik ini 
+
+
+
+86 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Gambar 4. 57. Halaman Dashboard 
+
+ 
+
+4.3.3.3. Halaman Setup Study Outcome 
+
+Halaman ini digunakan untuk CRUD (Create, Read, Update, Delete) data 
+
+Study Outcome (Capaian Pembelajaran Lulusan). Data Study Outcome ini nantinya 
+
+akan digunakan untuk data Learning Outcome (Capaian Pembelajaran Matakuliah). 
+
+Berikut tampilan halaman study outcome beserta aksi-aksi di halaman ini. 
+
+ 
+
+Gambar 4. 58. Halaman Study Outcome 
+
+
+
+87 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+1. Modal Tambah Study Outcome 
+
+ 
+
+Gambar 4. 59. Modal Tambah Study Outcome 
+
+ 
+
+2. Modal Edit Study Outcome 
+
+ 
+
+Gambar 4. 60. Modal Edit Study Outcome 
+
+ 
+
+3. Modal Konfirmasi Hapus Study Outcome 
+
+
+
+88 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Gambar 4. 61. Modal Konfirmasi Hapus Study Outcome 
+
+ 
+
+4.3.3.4. Halaman Matakuliah 
+
+Halaman ini digunakan untuk CRUD (Create, Read, Update, Delete) data 
+
+matakuliah. Data matakuliah ini nantinya akan digunakan untuk jadwal dan 
+
+pengisian KRS. Berikut tampilan halaman matakuliah beserta aksi-aksi di halaman 
+
+ini. 
+
+ 
+
+Gambar 4. 62. Halaman Matakuliah 
+
+ 
+
+1. Modal Tambah Matakuliah 
+
+
+
+89 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Gambar 4. 63. Modal Tambah Matakuliah 
+
+ 
+
+2. Modal Edit Matakuliah 
+
+ 
+
+Gambar 4. 64. Modal Edit Matakuliah 
+
+ 
+
+3. Modal Konfirmasi Hapus Matakuliah 
+
+ 
+
+Gambar 4. 65. Modal Konfirmasi Hapus Matakuliah 
+
+
+
+90 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+4.3.3.5. Halaman Setup Learning Outcome dan Assesment Matakuliah  
+
+Halaman ini digunakan untuk setup learning outcome dan assesment dalam 
+
+suatu matakuliah dan terdiri dari dua tab. Tab yang pertama yaitu tab setup learning 
+
+outcome dan assesment matakuliah, di tab ini user harus menambahkan terlebih 
+
+dahulu learning outcome dan assesment suatu matakuliah, setelah itu barulah user 
+
+bisa mengisi bobot assesment dari tiap-tiap assesment di tab setup bobot assesment. 
+
+Bobot assesment yang diisi akan dijumlahkan menjadi subtotal bobot assesment 
+
+dari setiap learning outcome, kemudian subtotal bobot assesment akan dijumlahkan 
+
+menjadi total bobot assesment. Total bobot assesment harus bernilai 100, jika tidak 
+
+maka akan ada peringatan error dan bobot assesment tidak bisa di simpan. 
+
+. 
+
+4.3.3.5.1. Tab Setup Learning Outcome dan Assesment 
+
+ 
+
+Gambar 4. 66. Tab Setup Learning Outcome dan Assesment 
+
+ 
+
+1. Modal Tambah Learning Outcome 
+
+
+
+91 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Gambar 4. 67. Modal Tambal Learning Outcome 
+
+ 
+
+2. Modal Tambah Learning Outcome 
+
+ 
+
+Gambar 4. 68. Modal Edit Learning Outcome 
+
+ 
+
+3. Modal Konfirmasi Hapus Learning Outcome 
+
+
+
+92 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Gambar 4. 69. Modal Konfirmasi Hapus Learning Outcome 
+
+ 
+
+4. Modal Tambah Assesment 
+
+ 
+
+Gambar 4. 70. Modal Tambah Assesment 
+
+ 
+
+5. Modal Edit Assesment 
+
+ 
+
+Gambar 4. 71. Modal Edit Assesment 
+
+ 
+
+6. Modal Konfirmasi Hapus Assesment 
+
+
+
+93 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Gambar 4. 72. Modal Konfirmasi Hapus Assesment 
+
+ 
+
+4.3.3.5.2. Tab Setup Bobot Assesment 
+
+ 
+
+Gambar 4. 73. Tab Setup Bobot Assesment 
+
+ 
+
+4.3.3.5.3. Report Rencana Pembelajaran Semester (RPS) 
+
+
+
+94 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Gambar 4. 74. Report Rencana Pembelajaran Semester (RPS) 
+
+ 
+
+4.3.3.6. Halaman Nilai Assesment Matakuliah Setiap Mahasiswa 
+
+Di halaman ini user bisa mengisi nilai assesment dari setiap mahasiswa yang 
+
+mengikuti suatu jadwal kuliah, nilai assesment yang di isi harus dalam range 0-100, 
+
+jika nilai assesment yang diisi di luar range, maka akan muncul peringatan error. 
+
+ 
+
+Gambar 4. 75. Halaman Nilai Assement Matakuliah Setiap Mahasiswa 
+
+
+
+95 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Gambar 4. 76. Report Nilai Assesment Matakuliah Setiap Mahasiswa 
+
+ 
+
+4.3.3.7. Halaman Study Outcome Mahasiswa 
+
+Di halaman ini ditampilkan hasil study outcome (capaian pembelajaran 
+
+lulusan) berdasarkan nilai-nilai assesment dari matakuliah yang telah diambil oleh 
+
+mahasiswa tersebut, user juga bisa mencetak hasil study outcome ini ke bentuk pdf. 
+
+ 
+
+Gambar 4. 77. Halaman Study Outcome Mahasiswa 
+
+ 
+
+
+
+96 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Gambar 4. 78. Report Study Outcome Mahasiswa 
+
+ 
+
+
+
+ 
+
+ 
+
+97 
+
+ 
+
+ 
+
+BAB V  
+
+KESIMPULAN DAN SARAN 
+
+ 
+
+5.1. Kesimpulan 
+
+Penulis tergabung dalam sebuah project untuk Pengembangan Sistem 
+
+Informasi Akademik Berbasis KKNI Universitas Jendral Achmad Yani Program 
+
+Studi Teknik Industri. Fokus penulis dalam project dan penelitian ini yaitu dalam 
+
+pengelolaan nilai matakuliah agar bisa mengikuti aturan atau alur sistem yang 
+
+sesuai dengan Kerangka Kualifikasi Nasional Indonesia atau biasa di singkat 
+
+KKNI. Berikut hasil yang penulis dapatkan selama project dan penelitian ini: 
+
+1. Pada awalnya, penulis dan tim project akan mengembangkan sistem 
+
+informasi akademik yang ada, tetapi dikarenakan kesulitan dalam proses 
+
+coding / penulisan program untuk mengembangkan sistem informasi 
+
+akademik tersebut, akhirnya seluruh tim sepakat untuk membangun sistem 
+
+informasi akademik yang baru dan batal untuk mengembangkan sistem 
+
+informasi akademik yang sudah ada sebelumnya. 
+
+2. Sistem informasi akademik berhasil dibuat walaupun terjadi keterlambatan 
+
+dalam pembuatan sistem informasi akademik tersebut khususnya dalam 
+
+pengelolaan nilai yang menjadi tanggung jawab penulis. Keterlambatan 
+
+terjadi dikarenakan kurangnya koordinasi antar anggota tim dan kurangnya 
+
+pengalaman penulis.  
+
+3. Pengelolaan nilai sudah berhasil diimplementasikan dalam sistem informasi 
+
+akademik ini dan bisa mengikuti aturan atau alur sistem yang sesuai dengan 
+
+Kerangka Kualifikasi Nasional Indonesia, akan tetapi sistem ini masih 
+
+belum bisa menentukan mahasiswa ini ahli dalam hal apa sesuai dengan 
+
+yang telah dirumuskan di Study Outcome (Capaian Pembelajaran Lulusan 
+
+Program Studi). 
+
+ 
+
+
+
+98 
+
+ 
+
+ 
+
+ 
+
+ 
+
+5.2. Saran 
+
+Berdasarkan dari penelitian yang telah dilaksanakan penulis yang tergabung 
+
+dalam project, masih banyak kekurangan dalam pengelolaan nilai di Sistem 
+
+Infomasi Akademik ini. Berikut beberapa saran yang dapat penulis sampaikan 
+
+untuk pengembangan Sistem Informasi Akademik ini di masa yang akan datang: 
+
+1. Sistem harus bisa menentukan mahasiswa ahli di bidang apa sesuai dengan 
+
+yang telah dirumuskan di Study Outcome (Capaian Pembelajaran Lulusan 
+
+Program Studi). 
+
+2. Sistem harus bisa mencetak data learning outcome beserta assesment dari 
+
+suatu matakuliah dan juga nilai assesment matakuliah dari setiap mahasiswa 
+
+seperti pada tampilan tabel: Tabel 4.1. Learning Outcome Matakuliah 
+
+berdasarkan Study Outcome; Tabel 4.2. Bobot Assesment Matakuliah; Tabel 
+
+4.3. Nilai Assesment Matakuliah setiap Mahasiswa. 
+
+ 
+
+ 
+
+
+
+ 
+
+ 
+
+99 
+
+ 
+
+ 
+
+DAFTAR PUSTAKA 
+
+Booch, G. (2005). The Unified Modeling Language User Guide Second Edition. 
+
+United State: Addison Wesley Professional. 
+
+Direktorat Jenderal Pembelajaran dan Kemahasiswaan. (2016). Panduan 
+
+Penyusunan Kurikulum Pendidikan Tinggi. Direktorat Jenderal 
+
+Pembelajaran dan Kemahasiswaan Kementrian Riset Teknologi dan 
+
+Pendidikan Tinggi. 
+
+Kadir, A. (2009). Dasar Perancangan dan Implementasi Database Relasional. 
+
+Yogyakarta: Andi. 
+
+M. Rudianto, A. (2011). Pemrograman Web Dinamis Menggunakan Php dan 
+
+Mysql. Yogyakarta: Andi. 
+
+Masrur, M. (2008). Analisis dan Pengembangan Sistem Informasi Akademik di 
+
+Unipdu Jombang.  
+
+Noviandi, F. R. (2012). Pengembangan Sistem Informasi Akademik Fakultas 
+
+Teknik Universitas Tanjung Pura.  
+
+Nugroho, A. (2009). Rekayasa Perangkat Lunak Menggunakan UML dan Java. 
+
+Yogyakarta: Andi Offset. 
+
+Oktaria, P., Sari, Y. P., Mardiani, & Hermawan. (2009). Rancang Bangun Sistem 
+
+Informasi Akademik Berbasis Web Pada Fakultas Ekonomi Universitas 
+
+Muhamaddiyah Palembang.  
+
+Perpress No 8. (2012). Tentang Kerangka Kualifikasi Nasional Indonesia. Jakarta. 
+
+Rosa, A., & Shalahuddin, M. (2011). Modul Pembelajaran Rekayasa Perangkat 
+
+Lunak. Bandung: Modula. 
+
+Sujatmiko, E. (2012). Kamus Teknologi Informasi dan Komunikasi. Surakarta: 
+
+Aksarra Sinergi Media. 
+
+
+
+100 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Whitten, J., & Bentley, L. (2007). System Analysis and Design Methods. McGraw-
+
+Hill. 
+
+ 
+
+
+
+ 
+
+ 
+
+101 
+
+ 
+
+ 
+
+RIWAYAT HIDUP 
+
+
+
+ 
+
+ 
+
+LAMPIRAN 
+
+Lampiran 1 Listing Program 
+
+StudyOutcome.php 
+
+<?php 
+ 
+namespace App\Models; 
+ 
+use Illuminate\Database\Eloquent\Model; 
+ 
+class StudyOutcome extends Model 
+{ 
+    protected $table = 'study_outcome'; 
+    protected $guarded = ['id']; 
+ 
+    public function learning_outcome_()  
+    { 
+        return $this->hasMany('App\Models\LearningOutcome'); 
+    } 
+} 
+
+ 
+
+Matakuliah.php 
+
+<?php 
+ 
+namespace App\Models; 
+ 
+use Illuminate\Database\Eloquent\Model; 
+ 
+class Matakuliah extends Model 
+{ 
+    protected $table = 'matakuliah'; 
+    protected $guarded = ['id']; 
+ 
+    public function learning_outcome_()  
+    { 
+        return $this->hasMany('App\Models\LearningOutcome'); 
+    } 
+     
+    public function program_studi() 
+    { 
+        return $this->belongsTo('App\Models\ProgramStudi'); 
+    }     
+     
+    public function jadwal() 
+    { 
+        return $this->hasMany('App\Models\Jadwal'); 
+    }     
+} 
+
+ 
+
+ 
+
+
+
+ 
+
+ 
+
+LearningOutcome.php 
+
+<?php 
+ 
+namespace App\Models; 
+ 
+use Illuminate\Database\Eloquent\Model; 
+ 
+class Matakuliah extends Model 
+{ 
+    protected $table = 'matakuliah'; 
+    protected $guarded = ['id']; 
+ 
+    public function learning_outcome_()  
+    { 
+        return $this->hasMany('App\Models\LearningOutcome'); 
+    } 
+     
+    public function program_studi() 
+    { 
+        return $this->belongsTo('App\Models\ProgramStudi'); 
+    }     
+     
+    public function jadwal() 
+    { 
+        return $this->hasMany('App\Models\Jadwal'); 
+    }     
+} 
+
+ 
+
+Assesment.php 
+
+<?php 
+ 
+namespace App\Models; 
+ 
+use Illuminate\Database\Eloquent\Model; 
+ 
+class Assesment extends Model 
+{ 
+    protected $table = 'assesment'; 
+    protected $guarded = ['id'];      
+ 
+    public function learning_outcome() 
+    { 
+        return $this->belongsTo('App\Models\LearningOutcome'); 
+    } 
+ 
+    public function nilai_assesment_()  
+    { 
+        return $this->hasMany('App\Models\NilaiAssesment'); 
+    }      
+} 
+
+ 
+
+ 
+
+ 
+
+
+
+ 
+
+ 
+
+NilaiAssesment.php 
+
+<?php 
+ 
+namespace App\Models; 
+ 
+use Illuminate\Database\Eloquent\Model; 
+ 
+class NilaiAssesment extends Model 
+{ 
+    protected $table = 'nilai_assesment'; 
+    protected $guarded = ['id']; 
+ 
+    public function detail_krs() 
+    { 
+        return $this->belongsTo('App\Models\DetailKrs'); 
+    }  
+     
+    public function assesment() 
+    { 
+        return $this->belongsTo('App\Models\Assesment'); 
+    }  
+     
+} 
+
+ 
+
+StudyOutcomeController.php 
+
+<?php 
+ 
+namespace App\Http\Controllers; 
+ 
+use Illuminate\Validation\Rule; 
+use Illuminate\Http\Request; 
+use App\Models\StudyOutcome; 
+use DataTables; 
+use Validator; 
+ 
+class StudyOutcomeController extends Controller 
+{ 
+    public function index() 
+    { 
+        return view('study-outcome.index'); 
+    } 
+ 
+    public function store(Request $request) 
+    {         
+        $validation = Validator::make($request->all(), [ 
+            'kode' => 'required|unique:study_outcome',            
+            'deskripsi' => 'required', 
+        ]); 
+           
+        if ($validation->passes()) 
+        { 
+            $study_outcome = StudyOutcome::create([ 
+                'kode' => $request->kode,            
+                'deskripsi' => $request->deskripsi, 
+                'program_studi_id' => '1',          
+            ]); 
+     
+            return response()->json([ 
+                'data'    => $study_outcome, 
+
+
+
+ 
+
+ 
+
+                'message' => 'Data StudyOutcome berhasil ditambah', 
+            ], 201); 
+        }    
+ 
+        return response()->json([ 
+            'errors'  => $validation->errors()->all(), 
+        ], 422);   
+    }   
+     
+    public function edit($id) 
+    { 
+        $study_outcome = StudyOutcome::find($id); 
+        return $study_outcome; 
+    } 
+ 
+    public function update(Request $request, $id) 
+    { 
+        $study_outcome = StudyOutcome::findOrFail($id); 
+ 
+        $validation = Validator::make($request->all(), [ 
+            'kode' => [ 
+                'required', 
+                Rule::unique('study_outcome')->ignore($study_outcome->id), 
+            ],            
+            'deskripsi' => 'required', 
+        ]);         
+         
+        if ($validation->passes()) 
+        { 
+            $study_outcome->update([ 
+                'kode' => $request->kode,            
+                'deskripsi' => $request->deskripsi,          
+                'program_studi_id' => '1', 
+            ]); 
+     
+            return response()->json([ 
+                'data'    => $study_outcome, 
+                'message' => 'Data StudyOutcome berhasil diupdate',                 
+            ]); 
+        }    
+ 
+        return response()->json([ 
+            'errors'  => $validation->errors()->all(), 
+        ], 422);          
+    } 
+ 
+    public function destroy($id) 
+    { 
+        $study_outcome = StudyOutcome::findOrFail($id); 
+        $study_outcome->delete(); 
+        return response()->json([ 
+            'message' => 'Data StudyOutcome berhasil dihapus' 
+        ]); 
+    } 
+ 
+    public function data() 
+    { 
+        $study_outcome = StudyOutcome::query(); 
+ 
+        return DataTables::of($study_outcome) 
+            ->addColumn('action', function($study_outcome){ 
+
+
+
+ 
+
+ 
+
+                return  '<a id="'.$study_outcome->id.'" 
+onclick="editForm('.$study_outcome->id.')" class="btn btn-info waves-
+effect"><i class="material-icons">mode_edit</i></a> '. 
+                        '<a id="'.$study_outcome->id.'" 
+onclick="deleteData('.$study_outcome->id.')" class="btn btn-danger waves-
+effect"><i class="material-icons">delete</i></a>'; 
+            })         
+            ->make(true);         
+    }     
+} 
+
+ 
+
+MatakuliahController.php 
+
+<?php 
+ 
+namespace App\Http\Controllers; 
+ 
+use Illuminate\Validation\Rule; 
+use Illuminate\Http\Request; 
+use App\Models\Matakuliah; 
+use DataTables; 
+use Validator; 
+ 
+class MatakuliahController extends Controller 
+{ 
+    public function index() 
+    { 
+        return view('matakuliah.index'); 
+    } 
+ 
+    public function store(Request $request) 
+    {         
+        $validation = Validator::make($request->all(), [ 
+            'kode' => 'required|unique:matakuliah',            
+            'nama' => 'required', 
+            'sks' => 'required', 
+            'semester' => 'required',             
+        ]); 
+           
+        if ($validation->passes()) 
+        { 
+            $matakuliah = Matakuliah::create([ 
+                'kode' => $request->kode,            
+                'nama' => $request->nama, 
+                'sks'  => $request->sks,            
+                'semester' => $request->semester,                   
+                'program_studi_id' => '1',         
+            ]); 
+     
+            return response()->json([ 
+                'data'    => $matakuliah, 
+                'message' => 'Data Matakuliah berhasil ditambah', 
+            ], 201); 
+        }    
+ 
+        return response()->json([ 
+            'errors'  => $validation->errors()->all(), 
+        ], 422);   
+    }   
+     
+    public function edit($id) 
+
+
+
+ 
+
+ 
+
+    { 
+        $matakuliah = Matakuliah::find($id); 
+        return $matakuliah; 
+    } 
+ 
+    public function update(Request $request, $id) 
+    { 
+        $matakuliah = Matakuliah::findOrFail($id); 
+ 
+        $validation = Validator::make($request->all(), [ 
+            'kode' => [ 
+                'required', 
+                Rule::unique('matakuliah')->ignore($matakuliah->id), 
+            ],            
+            'nama' => 'required', 
+            'sks' => 'required', 
+            'semester' => 'required', 
+        ]);         
+         
+        if ($validation->passes()) 
+        { 
+            $matakuliah->update([ 
+                'kode' => $request->kode,            
+                'nama' => $request->nama,   
+                'sks'  => $request->sks,            
+                'semester' => $request->semester,                   
+                'program_studi_id' => '1', 
+            ]); 
+     
+            return response()->json([ 
+                'data'    => $matakuliah, 
+                'message' => 'Data Matakuliah berhasil diupdate',                 
+            ]); 
+        }    
+ 
+        return response()->json([ 
+            'errors'  => $validation->errors()->all(), 
+        ], 422);          
+    } 
+ 
+    public function destroy($id) 
+    { 
+        $matakuliah = Matakuliah::findOrFail($id); 
+        $matakuliah->delete(); 
+        return response()->json([ 
+            'message' => 'Data Matakuliah berhasil dihapus' 
+        ]); 
+    } 
+ 
+    public function data() 
+    { 
+        $matakuliah = Matakuliah::query(); 
+ 
+        return DataTables::of($matakuliah) 
+            ->addColumn('action', function($matakuliah){ 
+                return  '<a id="'.$matakuliah->id.'" 
+onclick="editForm('.$matakuliah->id.')" class="btn btn-info waves-effect"><i 
+class="material-icons">mode_edit</i></a> '. 
+                        '<a id="'.$matakuliah->id.'" 
+onclick="deleteData('.$matakuliah->id.')" class="btn btn-danger waves-
+effect"><i class="material-icons">delete</i></a> '. 
+
+
+
+ 
+
+ 
+
+                        '<a href="/matakuliah/'.$matakuliah->id.'/learning-
+outcome" class="btn bg-teal waves-effect"><i class="material-
+icons">settings</i></a> '; 
+            })   
+            ->make(true);         
+    }     
+} 
+
+ 
+
+LearningOutcomeController.php 
+
+<?php 
+ 
+namespace App\Http\Controllers; 
+ 
+use Illuminate\Validation\Rule; 
+use Illuminate\Http\Request; 
+use App\Models\Matakuliah; 
+use App\Models\StudyOutcome; 
+use App\Models\LearningOutcome; 
+use DataTables; 
+use Validator; 
+ 
+class LearningOutcomeController extends Controller 
+{ 
+    public function index($matakuliah_id) 
+    { 
+        $matakuliah = Matakuliah::with(['learning_outcome_.study_outcome', 
+'learning_outcome_.assesment_', 'program_studi'])->findOrFail($matakuliah_id); 
+ 
+        $study_outcome_all_ = StudyOutcome::All(); 
+         
+        $study_outcome_ = StudyOutcome::whereHas('learning_outcome_', 
+function($query) use($matakuliah_id){ 
+            $query->where('matakuliah_id', $matakuliah_id); 
+        });   
+ 
+        $study_outcome_ = $study_outcome_-
+>with('learning_outcome_.assesment_')->get(); 
+ 
+        return view('matakuliah.learning-outcome', compact('matakuliah', 
+'study_outcome_', 'study_outcome_all_')); 
+    } 
+ 
+    public function store(Request $request) 
+    { 
+        $this->validate($request, [ 
+            'matakuliah_id' => 'required', 
+            'study_outcome_id' => 'required', 
+            'kode' => 'required',            
+            'deskripsi' => 'required', 
+        ]); 
+ 
+        $learning_outcome = LearningOutcome::create([ 
+            'matakuliah_id' => $request->matakuliah_id, 
+            'study_outcome_id' => $request->study_outcome_id, 
+            'kode' => $request->kode,            
+            'deskripsi' => $request->deskripsi,         
+        ]);         
+ 
+        return redirect('matakuliah/'.$request->matakuliah_id.'/learning-
+outcome')->with('message', 'Learning Outcome berhasil ditambahkan'); 
+
+
+
+ 
+
+ 
+
+    } 
+ 
+    public function update(Request $request, $id) 
+    { 
+        $this->validate($request, [ 
+            'matakuliah_id' => 'required', 
+            'study_outcome_id' => 'required', 
+            'kode' => 'required',            
+            'deskripsi' => 'required', 
+        ]); 
+ 
+        $learning_outcome = LearningOutcome::findOrFail($id); 
+ 
+        $learning_outcome->update([ 
+            'matakuliah_id' => $request->matakuliah_id, 
+            'study_outcome_id' => $request->study_outcome_id, 
+            'kode' => $request->kode,            
+            'deskripsi' => $request->deskripsi, 
+        ]); 
+         
+        return redirect('matakuliah/'.$request->matakuliah_id.'/learning-
+outcome')->with('message', 'Learning Outcome berhasil diupdate'); 
+    } 
+     
+    public function destroy(Request $request, $id) 
+    { 
+        $learning_outcome = LearningOutcome::findOrFail($id); 
+ 
+        if ($learning_outcome->assesment_()->count()) 
+        { 
+            return redirect('matakuliah/'.$request->matakuliah_id.'/learning-
+outcome')->with('error', 'Learning Outcome ini tidak bisa dihapus karena 
+digunakan oleh assesment'); 
+        }      
+ 
+        $learning_outcome->delete(); 
+ 
+        return redirect('matakuliah/'.$request->matakuliah_id.'/learning-
+outcome')->with('message', 'Learning Outcome berhasil dihapus');         
+    } 
+} 
+
+ 
+
+AssesmentController.php 
+
+<?php 
+ 
+namespace App\Http\Controllers; 
+ 
+use Illuminate\Validation\Rule; 
+use Illuminate\Http\Request; 
+use App\Models\Assesment; 
+use DataTables; 
+use Validator; 
+ 
+class AssesmentController extends Controller 
+{     
+    public function store(Request $request) 
+    { 
+        $this->validate($request, [ 
+            'learning_outcome_id' => 'required', 
+            'metode' => 'required', 
+
+
+
+ 
+
+ 
+
+        ]); 
+ 
+        $assesment = Assesment::create([ 
+            'learning_outcome_id' => $request->learning_outcome_id, 
+            'metode' => $request->metode,         
+        ]);         
+ 
+        return redirect('matakuliah/'.$request->matakuliah_id.'/learning-
+outcome')->with('message', 'Assesment berhasil ditambahkan'); 
+    } 
+ 
+    public function update(Request $request, $id) 
+    { 
+        $this->validate($request, [ 
+            'learning_outcome_id' => 'required', 
+            'metode' => 'required', 
+        ]); 
+ 
+        $assesment = Assesment::findOrFail($id); 
+ 
+        $assesment->update([ 
+            'learning_outcome_id' => $request->learning_outcome_id, 
+            'metode' => $request->metode, 
+        ]); 
+         
+        return redirect('matakuliah/'.$request->matakuliah_id.'/learning-
+outcome')->with('message', 'Assesment berhasil diupdate'); 
+    } 
+     
+    public function destroy(Request $request, $id) 
+    { 
+        $assesment = Assesment::findOrFail($id); 
+ 
+        $assesment->delete(); 
+ 
+        return redirect('matakuliah/'.$request->matakuliah_id.'/learning-
+outcome')->with('message', 'Assesment berhasil dihapus');         
+    } 
+     
+    public function bobot_bulk_update(Request $request) 
+    { 
+        $bobot_total = $this->bobot_total($request->bobot); 
+              
+        if ($bobot_total != 100) { 
+            return redirect('matakuliah/'.$request->matakuliah_id.'/learning-
+outcome')->with('error', 'Total Bobot Assesment harus 100'); 
+        }        
+         
+        foreach ($request->bobot as $id => $value) { 
+            $this->bobot_update($id, $value); 
+        } 
+ 
+        return redirect('matakuliah/'.$request->matakuliah_id.'/learning-
+outcome')->with('message', 'Bobot Assesment berhasil diupdate'); 
+    } 
+ 
+    private function bobot_total($bobot) 
+    { 
+        $total = 0; 
+        foreach ($bobot as $value) { 
+            $total += $value; 
+        } 
+ 
+
+
+
+ 
+
+ 
+
+        return $total; 
+    }     
+ 
+    private function bobot_update($id, $value)  
+    { 
+        $assesment = Assesment::findOrFail($id); 
+ 
+        $assesment->update([ 
+            'bobot' => $value, 
+        ]);         
+    } 
+} 
+
+ 
+
+NilaiAssesmentController.php 
+
+<?php 
+ 
+namespace App\Http\Controllers; 
+ 
+use Illuminate\Support\Collection; 
+use Illuminate\Validation\Rule; 
+use Illuminate\Http\Request; 
+use App\Models\NilaiAssesment; 
+use App\Models\Jadwal; 
+use Validator; 
+ 
+class NilaiAssesmentController extends Controller 
+{ 
+    public function index($jadwal_id) 
+    { 
+        $jadwal = Jadwal::with([ 
+            'detail_krs_', 
+            'matakuliah.learning_outcome_.assesment_',  
+        ])->findOrFail($jadwal_id); 
+ 
+        foreach ($jadwal->detail_krs_ as $detail_krs) { 
+ 
+            foreach($jadwal->matakuliah->learning_outcome_ as 
+$learning_outcome) { 
+                foreach($learning_outcome->assesment_ as $assesment) { 
+ 
+                    NilaiAssesment::firstOrCreate([ 
+                        'detail_krs_id' => $detail_krs->id, 
+                        'assesment_id' => $assesment->id, 
+                    ]); 
+ 
+                } 
+            } 
+ 
+        } 
+ 
+        $jadwal = Jadwal::with([ 
+            'detail_krs_.krs.mahasiswa',             
+            'detail_krs_.nilai_assesment_.assesment.learning_outcome',                                         
+            'matakuliah.learning_outcome_.assesment_', 
+            'tahun_akademik',              
+        ])->findOrFail($jadwal_id);         
+ 
+        return view('nilai-assesment.index', compact('jadwal')); 
+    } 
+ 
+
+
+
+ 
+
+ 
+
+    public function nilai_bulk_update(Request $request, $jadwal_id) 
+    {                 
+        $this->validate($request, [ 
+            'nilai.*' => 'nullable|integer|min:0|max:100', 
+        ]);      
+ 
+        foreach ($request->nilai as $id => $value) { 
+            $nilai_update = $this->nilai_update($id, $value); 
+ 
+        } 
+ 
+        return redirect('jadwal/'.$request->jadwal_id.'/nilai-assesment')-
+>with('message', 'Nilai Assesment berhasil diupdate');         
+    }     
+ 
+    private function nilai_update($id, $value) 
+    { 
+        $nilai_assesment = NilaiAssesment::findOrFail($id); 
+ 
+        $nilai_assesment->update([ 
+            'nilai' => $value, 
+        ]); 
+    } 
+} 
+
+ 
+
+
+ "
+}
